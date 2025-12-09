@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Reports - Live Previews</title>
+    <link href="//zmstatic/mockups/component/css/components.css" rel="stylesheet" type="text/css">
+    <link href="../css/local-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../css/icons.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            padding: 20px;
+            background: #eaedf1;
+            margin: 0;
+        }
+
+        .header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .open-btn {
+            text-decoration: none;
+            color: #2c7be5;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 10px;
+            background: #eef2f7;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .open-btn:hover {
+            background: #dce4ef;
+        }
+
+        .iframe-container {
+            height: 350px;
+            width: 100%;
+            position: relative;
+            background: #f9f9f9;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 250%;
+            /* Render at 2.5x width */
+            height: 250%;
+            /* Render at 2.5x height */
+            border: none;
+            transform: scale(0.4);
+            /* Scale down to 40% */
+            transform-origin: 0 0;
+            display: block;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Loading indicator for iframes */
+        .iframe-container::before {
+            content: 'Loading preview...';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #999;
+            font-size: 14px;
+            z-index: 0;
+        }
+
+        iframe {
+            position: relative;
+            z-index: 1;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Admin Reports HTML Previews</h1>
+        <p>Live preview of all HTML files. Click "Open Full" to view standalone page.</p>
+    </div>
+
+    <div class="grid">
+        <!-- Dashboard -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Dashboard</h3>
+                <a href="dashboard.html" target="_blank" class="open-btn">Open Full <i class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="dashboard.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- User Dashboard -->
+        <div class="card">
+            <div class="card-header">
+                <h3>User Dashboard</h3>
+                <a href="user-dashboard.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="user-dashboard.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Activity Summary -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Activity Summary</h3>
+                <a href="activity-summary.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="activity-summary.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Email Policies -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Email Policies</h3>
+                <a href="email-policies.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="email-policies.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Audit Logs -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Audit Logs</h3>
+                <a href="audit-logs.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="audit-logs.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Users List -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Users List</h3>
+                <a href="users.html" target="_blank" class="open-btn">Open Full <i class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="users.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Settings -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Settings</h3>
+                <a href="settings.html" target="_blank" class="open-btn">Open Full <i class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="settings.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- License Utilisation -->
+        <div class="card">
+            <div class="card-header">
+                <h3>License Utilisation</h3>
+                <a href="license-ultilisation-table.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="license-ultilisation-table.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Addon Storage -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Addon Storage</h3>
+                <a href="addon-storage.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="addon-storage.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Threat Traffic -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Threat Traffic Preview</h3>
+                <a href="threat-traffic-preview.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="threat-traffic-preview.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Impact Dashboard -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Impact Dashboard</h3>
+                <a href="impact-dashboard.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="impact-dashboard.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Site Tour -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Site Tour</h3>
+                <a href="sitetour.html" target="_blank" class="open-btn">Open Full <i class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="sitetour.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Chart with Table -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Chart with Table</h3>
+                <a href="chart-with-table.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="chart-with-table.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Chart Card -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Chart Card</h3>
+                <a href="chart-card.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="chart-card.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Dorm Reports Table -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Dorm Reports Table</h3>
+                <a href="dorm-reports-table.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="dorm-reports-table.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Dorm Reports Card -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Dorm Reports Card</h3>
+                <a href="dorm-reports-cardview.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="dorm-reports-cardview.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Data Dialog -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Dialog</h3>
+                <a href="data-dialog.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="data-dialog.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Loading State</h3>
+                <a href="loading.html" target="_blank" class="open-btn">Open Full <i class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="loading.html" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Audit Logs Mobile -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Audit Logs Mobile</h3>
+                <a href="audit-logs-mobile.html" target="_blank" class="open-btn">Open Full <i
+                        class="zmri-open-in-new"></i></a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="audit-logs-mobile.html" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
