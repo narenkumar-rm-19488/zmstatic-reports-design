@@ -1,0 +1,62 @@
+#{$appearanceDark}{
+    //Header
+    #{$appHeaderBG}: #242628;
+
+    //Background
+    #{$appChangeBG}: #242628;
+    #{$appTransBG}: transparent;
+    #{$appSubmenuColor}: transparent;
+    #{$appToggleColor}: #3D3F43;
+    #{$appSearchColor}: #3D3F43;
+    #{$appSearchBor}: #3D3F43;
+
+    //Profile
+    #{$appUserPanelGreyBG}: #18191B;
+
+    //Body
+    #{$appBodyColor}: #242628;
+
+    //Note
+    #{$appNoteColor}: #2D2F33;
+    #{$appNoteBro}: #3D3F43;
+    #{$appNoteYColor}: #2D2F33;
+    #{$appNoteYBro}: #3D3F43;;
+    #{$appNoteRColor}: #2D2F33;
+    #{$appNoteRBro}: #3D3F43;
+
+    //Loading
+    #{$appLoadingBG}: #3D3F43;
+    #{$appShineColor}: #55585E;
+}
+
+#{$lhsDark}{
+    //Logo
+    #{$appHeaderLogoBG}: #20242d;
+	#{$appHeaderLogoColor}: #fff;
+
+    //LHS
+    #{$appLHSBorder}: #3D3F43;
+	
+	#{$appbarlistBG}: #20242d;
+
+}
+
+#{$appearanceDark},
+#{$lhsDark},
+#{$lhsZohoOne} {
+    #{$textColorCritical}: #d80a0a;
+}
+
+#{$appearanceDark}{
+    #{$scrollBarBG}: #1f2023;
+    #{$scrollThumbBG}: #3c3f43;
+}
+
+#{$appearanceDark} #{$lhsDark}, #{$appearanceDark}#{$lhsDark}{
+    //Logo
+    #{$appHeaderLogoBG}: #111213;
+	
+	#{$appbarlistBG}: #111213;
+	
+	#{$appNLHSBG}: #18191B;
+}

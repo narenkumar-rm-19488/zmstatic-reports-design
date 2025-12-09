@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Admin Reports</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="//zmstatic/mockups/component/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../css/local-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../css/icons.css" rel="stylesheet" type="text/css">
+    <link href="../css/themes.css" rel="stylesheet" type="text/css">
+    <link href="../css/layout.css" rel="stylesheet" type="text/css">
+    <link href="../css/header.css" rel="stylesheet" type="text/css">
+    <link href="../css/appsbar.css" rel="stylesheet" type="text/css">
+    <link href="../css/sidebar.css" rel="stylesheet" type="text/css">
+    <link href="../css/actionbar.css" rel="stylesheet" type="text/css">
+    <link href="../css/reportstable.css" rel="stylesheet" type="text/css">
+    <link href="../css/quicksearch.css" rel="stylesheet" type="text/css">
+    <link href="../css/cardview.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #container .canvas-property {
+            border: none !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
+    </style>
+</head>
+
+<body class="zmf-lato zmAppLight zmThmBlue zmLHSDark">
+    <main class="zmr-main-container">
+        <header class="zmrheader">
+            <div class="zmrheader__brand">
+                <div class="zmrheader__logo">
+                    <i class="zmri-mailadmin"></i>
+                    <span class="zmrheader__name">Admin Reports</span>
+                </div>
+            </div>
+            <div class="zmrheader__info">
+                <div class="zmrpage-title">
+                    <button type="button"
+                        class="zmbtn zmbtn--btn zmbtn--unstyled zmbtn--primary zmbtn--md zmrback-btn"><i
+                            class="zmci-arrow-left-long"></i></button>
+                    <span class="zmrpage-text"><span>Zoho Chennai / Tower</span></span>
+                </div>
+                <div class="zmrheader__nav">
+                    <ul>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat quickopenbtn"><i
+                                    class="zmri-search zmbtn__icon"></i></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat pulse-effect"><i
+                                    class="zmri-clouddown zmbtn__icon"></i></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+                                    class="zmri-help zmbtn__icon"></i></button></li>
+                        <li class="zmrheader__nav-img">
+                            <div class="zmavatar zmavatar--md zmavatar--circle">
+                                <div class="zmavatar__image-wrapper"><img class="zmavatar__image" alt=""
+                                        src="../img/user-thumbnail.png"></div>
+                                <i class="zmuseravailability available"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="zmrpage-container">
+            <div class="zmrapps">
+                <div class="zmrapps-scrollbar">
+                    <ul>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='dashboard.html'"><i class="zmbtn__icon zmri-dashboard"></i><span
+                                    class="zmbtn__text">Dashboard</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-favourite"></i><span
+                                    class="zmbtn__text">Favourites</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='users.html'"><i class="zmbtn__icon zmri-user"></i><span
+                                    class="zmbtn__text">Users</span></button>
+                        </li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='addon-storage.html'"><i
+                                    class="zmbtn__icon zmri-mailunread"></i><span
+                                    class="zmbtn__text">Mailbox</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='threat-traffic-preview.html'"><i
+                                    class="zmbtn__icon zmri-statistics"></i><span class="zmbtn__text">Email
+                                    Statistics</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-groups"></i><span class="zmbtn__text">Groups</span></button>
+                        </li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='audit-logs.html'"><i class="zmbtn__icon zmri-logsnew"></i><span
+                                    class="zmbtn__text">Logs</span></button>
+                        </li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-security"></i><span
+                                    class="zmbtn__text">Compliance</span></button></li>
+                        <li class="zmrapps__active"><button
+                                class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-collaborative"></i><span class="zmbtn__text">Collaborative
+                                    Apps</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='activity-summary.html'"><i
+                                    class="zmbtn__icon zmri-organization"></i><span
+                                    class="zmbtn__text">Organization</span></button></li>
+                        <!--<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>
+								<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav" onclick="location.href='dorm-reports-cardview.html'"><span class="zmbtn__text">Dorm occupancy details</span></button></li>
+								<li class="current"><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span class="zmbtn__text">Dorm Table View</span></button></li>
+								<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span class="zmbtn__text">User booking rate</span></button></li><span class="zmbtn__text">Organization</span></button></li>-->
+                    </ul>
+                </div>
+                <div class="zmrsettings-section"><button
+                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsetting-btn"
+                        onclick="location.href='settings.html'"><i class="zmbtn__icon zmri-controls"></i><span
+                            class="zmbtn__text">Configuration</span></button></div>
+            </div>
+            <div class="zmrpage-contentarea">
+                <div class="zmrsubmenu-container">
+                    <ul>
+                        <li><button class="zmaccordion__trigger zmrsubmenu__nav"><span
+                                    class="zmaccordion__title">Resources</span><i
+                                    class="zmaccordion__icon zmci-angle-right-large"></i></button></li>
+                        <li><button class="zmaccordion__trigger zmrsubmenu__nav"><span
+                                    class="zmaccordion__title">Workdrive</span><i
+                                    class="zmaccordion__icon zmci-angle-right-large"></i></button></li>
+                        <li>
+                            <button class="zmaccordion__trigger zmrsubmenu__nav zmaccordion--expand-active"><span
+                                    class="zmaccordion__title">Dormitory reports</span><i
+                                    class="zmaccordion__icon zmci-angle-down-large"></i></button>
+                            <ul class="zmrsubmenu__item zmaccordion__content zmaccordion--enter zmaccordion--enter-active"
+                                style="max-height: 300px;">
+                                <li><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"
+                                        onclick="location.href='dorm-reports-cardview.html'"><span
+                                            class="zmbtn__text">Dorm occupancy details</span></button></li>
+                                <li class="current"><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+                                            class="zmbtn__text">Dorm Table View</span></button></li>
+                                <li><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+                                            class="zmbtn__text">User booking rate</span></button></li>
+                            </ul>
+                        </li>
+                        <li><button class="zmaccordion__trigger zmrsubmenu__nav"><span class="zmaccordion__title">Cliq
+                                    Summary</span><i class="zmaccordion__icon"></i></button></li>
+                        <li><button class="zmaccordion__trigger zmrsubmenu__nav"><span
+                                    class="zmaccordion__title">Meeting Summary</span><i
+                                    class="zmaccordion__icon"></i></button></li>
+                    </ul>
+                </div>
+                <div class="zmrcontent-container">
+                    <div class="zmrcontent-non-scrollable">
+                        <div class="zmractionbar">
+                            <div class="zmractionbar__left">
+                                <div class="zmractionbar-nav">
+                                    <div class="zmbuttonbar-block">
+                                        <div class="zmrselectduration-box">
+                                            <div class="zmform-element">
+                                                <div class="zmtext zmtext--outlined zmselect zmtext--md">
+                                                    <div class="zmtext-field-wrapper">
+                                                        <span class="zmtext__box zmselect__box">Last 7 days ( May 30 -
+                                                            Jun 5, 2024 )</span>
+                                                        <div class="zmtext__adorn zmselect__arrow"><i
+                                                                class="zmci-angle-down"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="zmmenu-separator zmmenu-separator--line"></i>
+                                        <div class="zmrselectbuilding-box">
+                                            <div class="zmform-element">
+                                                <div class="zmtext zmtext--filled zmselect zmtext--md">
+                                                    <div class="zmtext-field-wrapper">
+                                                        <span class="zmtext__box zmselect__box">Zoho Chennai /
+                                                            Tower</span>
+                                                        <div class="zmtext__adorn zmselect__arrow"><i
+                                                                class="zmci-angle-down"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="zmmenu-separator zmmenu-separator--line"></i>
+                                        <div class="zmrdatenavigator-box">
+                                            <button
+                                                class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--unstyled zmbtn--primary"><i
+                                                    class="zmci-angle-left-large zmbtn__icon"></i></button>
+                                            <span class="zmrdatenavigator__text">06-Jan-2025 - 12-Jan-2025</span>
+                                            <button
+                                                class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--unstyled zmbtn--primary"><i
+                                                    class="zmci-angle-right-large zmbtn__icon"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zmractionbar__right">
+                                <fieldset class="zmform-element zmform-element--column">
+                                    <div class="zmform-input-column">
+                                        <div class="zminput-group zminput-group--inline-group">
+                                            <div class="zminput-group__item">
+                                                <label
+                                                    class="zminput-control-label zminput-control-label-button--outlined zminput-control-label-button--circle">
+                                                    <span class="zmradio">
+                                                        <input type="radio" name="buttonoption" checked="">
+                                                        <span class="zminput-control-label-button__text">Dorm
+                                                            view</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="zminput-group__item">
+                                                <label
+                                                    class="zminput-control-label zminput-control-label-button--outlined zminput-control-label-button--circle">
+                                                    <span class="zmradio">
+                                                        <input type="radio" name="buttonoption">
+                                                        <span class="zminput-control-label-button__text">Bed view</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zmrcontent-scrollable zmrcontent-scrollbar">
+                        <table class="zmtable zmtable--simple zmreports-table">
+                            <thead class="zmtable-header zmtable-header--sticky">
+                                <tr class="zmtable-row tableHead">
+                                    <th class="zmtable-cell--align-left">Building Name</th>
+                                    <th class="zmtable-cell--align-left">Name / Location</th>
+                                    <th class="zmtable-cell--align-left">Booking count</th>
+                                    <th class="zmtable-cell--align-left">Working hours</th>
+                                    <th class="zmtable-cell--align-left">Free hours</th>
+                                    <th class="zmtable-cell--align-left">Used hours</th>
+                                    <th class="zmtable-cell--align-left">Free (%)</th>
+                                    <th class="zmtable-cell--align-left">Utilzation (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 1</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 2</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 3</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 4</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 5</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 6</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row zmreports-title">
+                                    <td colspan="8">Floor 8</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>Gents Dormitory</td>
+                                    <td>-</td>
+                                    <td>102</td>
+                                    <td>168</td>
+                                    <td>474</td>
+                                    <td>642</td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmw-dotCWrap">
+                                            <div class="zmw-dotCBar">
+                                                <div class="zmw-dotProgress" style="width: 30%"></div>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                            <span class="zmw-proTxt">30%</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

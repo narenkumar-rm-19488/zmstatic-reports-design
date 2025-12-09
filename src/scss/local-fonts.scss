@@ -1,0 +1,98 @@
+/* Local font overrides for ZMC icon fonts */
+/* These override the external fonts from zmstatic to fix CORS issues */
+
+@font-face {
+    font-family: "ZmIconFont-arrows";
+    src: url(../img/zmc-fonts/zmc-arrows.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-arrows.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-communications";
+    src: url(../img/zmc-fonts/zmc-communications.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-communications.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-connectivity";
+    src: url(../img/zmc-fonts/zmc-connectivity.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-connectivity.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-editing";
+    src: url(../img/zmc-fonts/zmc-editing.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-editing.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-security";
+    src: url(../img/zmc-fonts/zmc-security.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-security.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-time";
+    src: url(../img/zmc-fonts/zmc-time.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-time.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-files";
+    src: url(../img/zmc-fonts/zmc-files.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-files.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-zoho-products";
+    src: url(../img/zmc-fonts/zmc-zoho-products.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-zoho-products.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-accessibility";
+    src: url(../img/zmc-fonts/zmc-accessibility.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-accessibility.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-design";
+    src: url(../img/zmc-fonts/zmc-design.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-design.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-maps";
+    src: url(../img/zmc-fonts/zmc-maps.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-maps.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ZmIconFont-file-types";
+    src: url(../img/zmc-fonts/zmc-file-types.woff2) format('woff2'),
+        url(../img/zmc-fonts/zmc-file-types.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

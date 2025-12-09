@@ -1,0 +1,1012 @@
+@import 'global/variables';
+
+$dashprefix: 'zmrdashboard';
+
+.#{$dashprefix}{
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: var(--#{$dashprefix}-bg, transparent);
+        overflow: hidden;
+    }
+	&-header{
+		border-bottom: 1px solid var(--#{$dashprefix}-header-border-bottom-color, var($border, #e4e5e7));
+        background-color: var(--#{$dashprefix}-header-bg, transparent);
+        padding-inline: var(--#{$dashprefix}-header-padding-x-start, 24px) var(--#{$dashprefix}-header-padding-x-end, 16px);
+        display: flex;
+        gap: 24px;
+        --zmmenu-separator-margin-x: 8px;
+        &-nav{
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            --zmtab-underlined-padding-y-end: 12px;
+            --zmtab-font-size: 16px;
+        }
+        &-action{
+            flex-shrink: 0;
+            padding: var(--#{$dashprefix}-header-padding-y, 12px) 0;
+            display: inline-flex;
+            align-items: center;
+        }
+        &-menu{
+            padding-bottom: var(--#{$dashprefix}-menu-padding-y-end, 8px);
+            --zmbutton-font-size: 20px;
+            --zmbutton-padding-y: 2px;
+            --zmbutton-padding-x: 2px;
+        }
+	}
+    &-tabcontainer{
+        flex: 1;
+        overflow: hidden;
+        > div{
+            > i{
+                margin-block-end: 8px;
+            }
+            button{
+                margin-block-end: 8px;
+            }
+        }
+    }
+    &-content{
+        flex: 1 1 0;
+        overflow-y: auto;
+    }
+    &-table{
+        border: none;
+        --zmtable-cell-padding-y: #{$space8};
+        --zmtable-cell-padding-x: #{$space16};
+        --zmtable-cell-title-font-size: #{$fontSize14};
+        --zmtable-cell-title-font-weight: #{$fontNormal};
+        --zmtable-cell-description-color: #{$appTextColor};
+        --zmtable-border-color: #{$appBorderLightColor};
+        --zmtable-header-font-weight: #{$fontNormal};
+        --zmtable-cell-border-color: #{$appBorderColor};
+        --zmtable-header-bg: #{$appTableHeadBG};
+        --zmtable-row-hover-bg: #{$appListHoverBG};
+        
+        .zmAppDark &{
+            --zmtable-row-hover-bg: #2d2f33;
+        }
+        &-wrapper{
+            block-size: 100%;
+            display: flex;
+            flex-direction: column;
+            inline-size: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+    }
+    &-list{
+        border: 1px solid $appBorderColor;
+        border-radius: 8px;
+        overflow: hidden;
+        &__item{
+            --zmci-font-size: 2rem;
+            padding: $space12 $space24;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+            &:hover{
+                background-color: $appGreyBG;
+                .zmrdashboard-list__arrow{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &:not(:last-child){
+                border-block-end: 1px solid $appBorderColor;
+            }
+        }
+        &__info{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        &__arrow{
+            position: absolute;
+            inset-inline-end: 8px;
+            inset-block-start: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            color: $appArrowColor;
+        }
+        &__value{
+            font-size: 18px;
+            font-weight: 700;
+            color: $appThemeColor500;
+        }
+    }
+    &-card{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        padding-block: $space16;
+        border-block-end: 1px solid $appBorderColor;
+    }
+    &-item{
+        padding-inline: $space16;
+        border-radius: $radius4;
+        border: 1px solid $appBorderColor;
+        flex-basis: 280px;
+    }
+    &-data{
+        display: flex;
+        flex-direction: column;
+        &-info{
+            padding-block: $space8;
+            border-block-end: 1px dashed $appBorderColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding-block: $space12;
+            &-text{
+                font-size: $fontSize18;
+                font-weight: 700;
+                color: $appErrorColor;
+                &-success{
+                    color: $appSuccessColor;
+                }
+            }
+        }
+        &-box{
+            display: flex;
+            padding-block: $space12;
+        }
+        &-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex: 1 1 0;
+            text-align: center;
+            &:not(:last-child){
+                border-inline-end: 1px dashed $appBorderColor;
+            }
+            &-text{
+                font-size: $fontSize16;
+                font-weight: 700;
+                color: $appThemeColor500;
+            }
+        }
+    }
+}
+
+$cardprefix: 'zmrcard';
+
+.#{$cardprefix}{
+    border: solid 1px var(--#{$cardprefix}-border-color, transparent);
+    border-radius: var(--#{$cardprefix}-border-radius, 0);
+    padding: var(--#{$cardprefix}-padding-y, 0) var(--#{$cardprefix}-padding-x, 24px);
+    display: flex;
+    flex: 1 1 auto;
+    margin: var(--#{$cardprefix}-margin-y, 16px) var(--#{$cardprefix}-margin-x, 0);
+    &:not(:first-child){
+        border-left: 1px solid var(--#{$cardprefix}-border-left-color, var($border, #e4e5e7));
+    }
+    &-list{
+        display: flex;
+        gap: var(--#{$cardprefix}-gap, 0);
+        background-color: var(--#{$cardprefix}-header-bg, transparent);
+        border-bottom: 1px solid var(--#{$cardprefix}-border-bottom-color, var($border, #e4e5e7));
+    }
+    &__info{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+    &__text{
+        font-size: var(--#{$cardprefix}-text-font-size, 26px);
+        color: var(--#{$cardprefix}-text-color, var($theme500));
+        font-weight: 700;
+    }
+    &__label{
+        font-size: var(--#{$cardprefix}-label-font-size, 14px);
+        color: var(--#{$cardprefix}-label-color, var($textColorLight));
+    }
+}
+
+$chartprefix: 'zmrchart';
+
+.#{$chartprefix}{
+    &-wrapper{
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    &-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+        box-sizing: border-box;
+        &:nth-child(odd){
+            border-right: 1px solid var(--#{$chartprefix}-border-right-color, var($border, #e4e5e7));
+        }
+        &:not(:nth-last-of-type(-n+2)){
+            border-bottom: 1px solid var(--#{$chartprefix}-border-bottom-color, var($border, #e4e5e7));
+        }
+        &.expandActive{
+            &::before{
+                content: '';
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,.6);
+                z-index: 998;
+            }
+            .zmrchart-box{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 1280px;
+                height: 580px;
+                z-index: 999;
+                background: #fff;
+                border: 1px solid #e4e5e7;
+                border-radius: 8px;
+                box-shadow: 0 0.8px 10px 0 rgba(0,0,0,.18);
+            }
+        }
+    }
+    &-box{
+        padding: var(--#{$chartprefix}-padding-y, 24px) var(--#{$chartprefix}-padding-x, 24px);
+        position: relative;
+        &:hover{
+            .#{$chartprefix}{
+                &-action, &-header-dragicon{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            } 
+        }
+    }
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block-end: 16px;
+        position: relative;
+        &-dragicon{
+            position: absolute;
+            inset-inline-start: -18px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s ease;
+            color: var(--#{$chartprefix}-darg-icon-color, #666970);
+        }
+        &-title{
+            font-size: var(--#{$chartprefix}-title-font-size, 18px);
+            font-weight: 700;
+        }
+        &-sort{
+            color: var(--#{$chartprefix}-sort-text-color, #666970);
+            padding-left: 16px;
+            position: relative;
+            font-size: var(--#{$chartprefix}-sort-font-size, 14px);
+            font-weight: normal;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 4px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 6px;
+                height: 6px;
+                background-color: #BDBDBD;
+                border-radius: 50%;
+            }
+        }
+    }
+    &-action{
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease;
+        border-radius: 4px;
+        border: 1px solid var(--#{$chartprefix}-action-border-color, var($border, #e4e5e7));
+        button{
+            --zmbutton-border-radius: 0 !important;
+            --zmbutton-margin-x-start: 0 !important;
+            overflow: inherit;
+            position: relative;
+            &:not(:first-child){
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -1px;
+                    top: -1px;
+                    bottom: 0;
+                    width: 1px;
+                    height: 29px;
+                    background-color: var($border, #e4e5e7);
+                }
+            }
+        }
+    }
+    &-contentarea{
+        block-size: 286px;
+    }
+    &-legend{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding-top: 12px;
+        &-item{
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        &-icon{
+            width: 12px;
+            height: 12px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+        &-info{
+            flex: 1;
+            &-text{
+                font-size: 16px;
+                color: $textColor, #18191b;
+                font-weight: 700;
+            }
+            &-label{
+                font-size: 12px;
+                color: $appTextColorLight, #666970;
+            }
+        }
+    }
+}
+
+.zmrtheme{
+    &-color{
+        position: relative;
+        width: 48px;
+        height: 18px;
+        border-radius: 4px;
+        overflow: hidden;
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 18px;
+        }
+        &::before{
+            left: 0;
+        }
+        &::after{
+            right: 0;
+        }
+        &--option1{
+            &::before{
+                background-color: #317FFD;
+            }
+            &::after{
+                background-color: #FD6861;
+            }
+        }
+        &--option2{
+            &::before{
+                background-color: #0D7698;
+            }
+            &::after{
+                background-color: #FF8455;
+            }
+        }
+        &--option3{
+            &::before{
+                background-color: #5951A5;
+            }
+            &::after{
+                background-color: #60B661;
+            }
+        }
+        &--option4{
+            &::before{
+                background-color: #E96299;
+            }
+            &::after{
+                background-color: #01BCED;
+            }
+        }
+        &--option5{
+            &::before{
+                background-color: #7AB796;
+            }
+            &::after{
+                background-color: #FFC872;
+            }
+        }
+        &--option6{
+            &::before{
+                background-color: #2E2E2E;
+            }
+            &::after{
+                background-color: #DDDDDD;
+            }
+        }
+    }
+    &-selected{
+        color: $appThemeColor500;
+    }
+}
+
+.zmrcustom{
+    &-header{
+        padding-bottom: 28px;
+        border-bottom: 1px solid $appBorderColor;
+        --zmdialog-padding: 32px;
+    }
+    &-dialog{
+        width: 600px;
+    }
+    &__filed{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    &__col{
+        flex: 0 0 calc(50% - 12px);
+        position: relative;
+        .zmrdrag-icon{
+            position: absolute;
+            right: -16px;
+            top: 16px;
+            cursor: move;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+        &:hover{
+            .zmrdrag-icon{
+                opacity: .9;
+            }
+        }
+    }
+    &__toggle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title{
+        font-size: 16px;
+        color: $appTextColorTitle;
+        font-weight: 700;
+        padding: 24px 0;
+    }
+    &__widget{
+        border: 1px solid $appInputBorderColor;
+        border-radius: 4px;
+        flex: 1;
+        &__list{
+            padding: 8px 12px;
+            &:not(:last-child){
+                border-bottom: 1px solid $appInputBorderColor;
+            }
+        }
+    }
+    &__add{
+        align-self: stretch;
+    }
+    &__action{
+        width: 100%;
+        height: 103px;
+        justify-content: center;
+    }
+    &__footer{
+        margin-top: 24px;
+        border-top: 1px solid $appBorderColor;
+        --zmbutton-margin-x-start: 16px;
+    }
+}
+
+#zmrcustom-dialog, #zmrtheme-dialog{
+    visibility: hidden;
+}
+#zmrcustom-dialog.show, #zmrtheme-dialog.show{
+    visibility: visible;
+}
+.zmrLhs-toggle {
+    z-index: 1000;
+    align-items: center;
+    background-color: $appToggleBG;
+    block-size: 48px;
+    border-start-end-radius: 7px;
+    border-end-end-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    inline-size: 7px;
+    inset-block-start: 50%;
+    inset-inline-end: -1px;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-50%) rotate(180deg) !important;
+    i{
+        --zmci-font-size: #{rem(9px)};
+        color: $appWhiteColor;
+    }
+    [dir="rtl"] &{
+        i{
+            transform: scaleX(-1);
+        }
+    }
+}
+
+
+
+.zmruserdashboard{
+    &-section{
+        flex: 1 1 0;
+    }
+    &-wrapper{
+        display: flex;
+        flex-direction: row;
+        block-size: 100%;
+    }
+    &__search{
+        padding: 8px;
+    }
+    &__userpanel{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        inline-size: 280px;
+        border-inline-end: 1px solid var(--app-border-color);
+        position: relative;
+        transition: all .3s ease;
+        &:hover {
+            .zmruserdashboard__userpanel__toggle  {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &__toggle {
+            z-index: 1000;
+            align-items: center;
+            background-color: var(--app-toggle-bg);
+            block-size: 48px;
+            border-start-end-radius: 7px;
+            border-end-end-radius: 7px;
+            cursor: pointer;
+            display: flex;
+            inline-size: 7px;
+            inset-block-start: 50%;
+            inset-inline-end: -1px;
+            justify-content: center;
+            opacity: 0;
+            position: absolute;
+            transform: translateY(-50%) rotate(180deg) !important;
+            i{
+                --zmci-font-size: 9px;
+                color: #fff;
+            }
+            [dir="rtl"] &{
+                i{
+                    transform: scaleX(-1);
+                }
+            }
+        }
+        &--shrink{
+            min-inline-size: 56px;
+            inline-size: 56px;
+            .zmruserdashboard__search__box{
+                cursor: pointer;
+            }
+            .zmruserdashboard__userpanel__toggle{
+                border-radius: 0;
+                border-start-end-radius: 7px;
+                border-end-end-radius: 7px;
+                inset-inline-end: -7px;
+                opacity: 1;
+                transform: translateY(-50%) rotate(0deg) !important;
+                visibility: visible;
+            }
+        }
+    }
+    &__userlist{
+        --zmlist-item-border-radius: 0;
+        --zmlist-contact-item-height: 48px;
+        --zmlist-item-gap: 12px;
+        flex: 1 1 0;
+        overflow-y: auto;
+    }
+    &__noData{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content{
+        flex: 1;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+    &__panel{
+        display: flex;
+        flex-direction: column;
+        background-color:  var(--app-grey-10);
+        &-wrapper{
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        &-content{
+            padding: 24px;
+            flex: 1 1 0;
+            overflow-y: auto;
+        }
+        &:not(:first-child){
+            background-color: transparent;
+            border-inline-start: 1px solid var(--app-border-color);
+        }
+    }
+    &__status{
+        &-enabled{
+            color: var(--app-success-color);
+        }
+        &-disabled{
+            color: var(--app-error-color);
+        }
+    }
+    &__user{
+        grid-gap: 24px;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        padding-block-end: 16px;
+        .zmruserdashboard__user__popout{
+            opacity: 0;
+            visibility: hidden;
+           
+        }
+        &:hover{
+            .zmruserdashboard__user__popout{
+                opacity: 1;
+                visibility: visible;
+               
+            }
+        }
+        &-box{
+            text-align: center;
+        }
+        &-status{
+            position: absolute;
+            inline-size: 100%;
+            padding: 4px 0;
+            color: #fff;
+            background-color: rgba(0, 0, 0, .6);
+            inset-block-end: 0;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.2;
+            i{
+                margin-inline-start: 8px ;
+            }
+            &--enabled i{
+                color: var(--app-success-color); 
+            }
+            &--disabled i{
+                color: var(--app-grey-300); 
+            }
+        }
+        &-image{
+            inline-size: 120px;
+            block-size: 120px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        &-info{
+            display: inline-flex;
+            flex-direction: column;
+            gap: 6px;
+            h2{
+                font-size: 22px;
+                line-height: 1;
+                display: flex;
+                gap: 4px;
+            }
+            > span{
+                font-size: 16px;
+                span{
+                    color: var(--app-text-color-light);
+                }
+            }
+        }
+        &__enabled{
+            display: inline-block;
+            color: var(--app-success-color); 
+            font-size: 14px !important;
+        }
+        &__disabled{
+            display: inline-block;
+            color: var(--app-error-color); 
+            font-size: 14px !important;
+        }
+        &__popout{
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+        &__email{
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            > span{
+                color: var(--app-text-color) !important;
+            }
+            &__copy{
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease-in-out;
+            }
+            &:hover{
+                .zmruserdashboard__user__email__copy{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    &__info{
+        position: relative;
+        &:not(:last-child){
+            border-block-end: 1px solid var(--app-border-color);
+            margin-block-end: 24px;
+            padding-block-end: 24px;
+        }
+        &:hover{
+            .zmruserdashboard__popout{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &__title{
+        --h3-font-size: 16px;
+        line-height: 1;
+        padding-block-end: 16px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        &__help{
+            cursor: pointer;
+            color: var(--app-text-color-light);
+            --zmci-font-size: 14px;
+        }
+    }
+    &__listing{
+        margin-block-start: 4px;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            li{
+                grid-gap: 12px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+                line-height: 1.58;
+            }
+        }
+        &__value{
+            font-weight: 700;
+        }
+    }
+    &__plan{
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+    &__table{
+        margin-block-start: 4px;
+        block-size: 195px;
+        overflow: auto;
+    }
+    &__storage{
+        margin-block-start: 4px;
+        grid-gap: 16px;
+        display: grid;
+        text-align: center;
+        &-wrapper{
+            display: flex;
+            gap: 24px;
+            margin-block-start: 24px;
+        }
+        &-item{
+            flex: 1 1 0;
+            .zmruserdashboard__title{
+                justify-content: center;
+            }
+        }
+        &-img{
+            text-align: center;
+            position: relative;
+        }
+        &-graph{
+            inline-size: 145px;
+            block-size: 145px;
+        }
+        &-track,
+        &-indicator {
+            fill: none;
+        }
+        &-track{
+            stroke: #D4D4D4;
+        }
+        &-indicator {
+            stroke: #60B661;
+            animation: storage-progress 1s ease-out forwards;
+        }
+        &-info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: flex-start;
+        }
+        &-value{
+            font-weight: 700;
+        }
+        &__icon{
+            --zmci-font-size: 24px;
+        }
+        &__plus{
+            padding-inline: 4px;
+        }
+        &-size{
+            position: absolute;
+            block-size: 100%;
+            inline-size: 100%;
+            inset-block-start: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+        }
+        &-used{
+            font-size: 20px;
+            span{
+                font-size: 28px;
+                font-weight: 700;
+            }
+        }
+    }
+    &__audilog{
+        --zmtimeline-content-margin-inline: 24px;
+        &__label{
+            max-inline-size: 160px;
+            font-size: 12px;
+        }
+        &__popout{
+            --zmbutton-font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+        &__content{
+            &:hover{
+                .zmruserdashboard__audilog__popout{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    &__statistics{
+        grid-gap: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        margin-block-start: 4px;
+        &-item{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &-pointer{
+            cursor: pointer;
+        }
+        &-value{
+            font-size: 24px;
+            font-weight: 700;
+            &.green a{
+                color: #60B661;
+            }
+            &.blue a{
+                color: #317FFD;
+            }
+            &.orange a{
+                color: #FF9569;
+            }
+        }
+    }
+    &__popout{
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-start: -4px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+@keyframes storage-progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+}
+.zmrloading{
+    position: relative;
+    &-bar {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inline-size: 1%;
+        block-size: 5px;
+        animation-name: zmrloading-bar;
+        animation-duration: 2.4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        margin-inline-start: 1px;
+        &.bar1 {
+            background: #D92231;
+        }
+        &.bar2 {
+            background: #26A146;
+            animation-delay: .6s;
+        }
+        &.bar3 {
+            background: #008CD2;
+            animation-delay: 1s;
+        }
+        &.bar4 {
+            background: #FDB924;
+            animation-delay: 1.8s;
+        }
+    }
+}
+@keyframes zmrloading-bar {
+    0% {
+        inline-size: 1%;
+        z-index: 5;
+    }
+    25% {
+        z-index: 4;
+    }
+    50% {
+        inline-size: 100%;
+        z-index: 3;
+    }
+    100% {
+        inline-size: 105%;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,64 @@
+@import 'global/variables';
+
+$settingsclassname: ".zmr-settings";
+
+#{$settingsclassname}{
+    &--container {
+        inline-size: 100%;
+    }
+    &--tab-header {
+        --zmtab-font-size: 1rem;
+        border-block-end: 1px solid $appBorderColor !important;
+        margin-block-start: 0 !important;
+        padding-inline-start: $space24;
+        padding-block-start: $space24;
+        position: relative !important;
+        span {
+            margin-block-end: $space4;
+        }
+    }
+    &--general-settings {
+        .button-rounded{
+            --zmbutton-border-radius: 1.875rem;
+        }
+        .zmsettings-page-header {
+            padding: 10px 24px 10px !important;
+            p {
+                margin-block-start: 4px !important;
+            }
+            .zmsettings-page-header-data {
+                padding-block-start: rem(5px) !important;
+                --zminput-control-label-font-weight : bold
+            }
+            .zmsettings-page-title {
+                font-size: $fontSize16 !important;
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                padding-top: $space12;
+            }
+            .zmsettings-page-desc{
+                margin-inline-start: 0 !important;
+            }
+        }
+    }
+}
+.export-settings{
+    padding: $space12 0 0;
+    --zmform-label-column-width: 130px;
+}
+.theme-settings{
+    padding: $space24 0 0;
+    .zmrtheme-color{
+        margin-left: $space8;
+        margin-right: $space4;
+    }
+}
+.zmrtab-container{
+	padding: $space24 $space24 0;
+	border-bottom: 1px solid $appBorderColor;
+}
+
+.recurringActionBar .input-bg, .recurringActionBar .contact-input-bg {
+    --zmtext-box-width: 200px;
+}

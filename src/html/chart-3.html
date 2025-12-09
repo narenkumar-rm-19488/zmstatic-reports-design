@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <title>Zoho Charts demo</title>
+    <meta charset="utf-8">
+    <!-- Added d3.js  -->
+    <script type="text/javascript" src="//zmstatic/mockups/mail-admin/html/cpanel/scripts/d3.min.js"></script>
+    <!-- Added zc-min.js  -->
+    <script type="text/javascript" src="//zmstatic/mockups/mail-admin/html/cpanel/scripts/zc.min.js"></script>
+
+    <style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+	}
+    #container {
+		height: 350px;
+    	width: 100%;
+    }
+	#container .canvas-property{
+		border: none !important;
+		box-shadow: none !important;
+	}
+    .test {
+    	display: table;
+    	width: 100%;
+    }
+    </style>
+
+</head>
+
+<body style="overflow: hidden;">
+    <div class="test">
+        <div class="container" id="container"></div>
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+
+        // This is the json data by which the chart will be drawn.
+
+        var data = {
+	"seriesdata": {
+		"stackGroup": [
+			[
+				0,
+				1,
+				2
+			]
+		],
+		"type": 10,
+		"chartdata": [
+			{
+				"seriesname": "Mail Storage",
+				"data": [
+					[
+						[
+							"Bilala Kulkarni",
+							1.5
+						],
+						[
+							"George Francis",
+							2.2
+						],
+						[
+							"Nishanth Kumar",
+							3.5
+						],
+						[
+							"Ranjith Kumar",
+							4.2
+						],
+						[
+							"Jaya Prakash",
+							4.8
+						],
+						[
+							"Ragupati T",
+							5.5
+						],
+						[
+							"Murali Krishna K",
+							8.3
+						],
+						[
+							"Mohan Muragan",
+							10
+						],
+						[
+							"Super Admin",
+							12
+						]
+					]
+				]
+			}
+		]
+	},
+	"metadata": {
+		"axes": {
+			"x": [
+				0
+			],
+			"y": [
+				[
+					1
+				]
+			],
+			"clr": [
+				2
+			],
+			"tooltip": [
+				"<div style='font-size:14px;'>{{val(0)}}</div>",
+				"<span style='font-size:18px'>{{val(1)}}</span>"
+			]
+		},
+		"columns": [
+			{
+				"dataindex": 0,
+				"show": false,
+				"columnname": "User",
+				"datatype": "ordinal"
+			},
+			{
+				"dataindex": 1,
+				"columnname": "size",
+				"datatype": "numeric",
+				"numeric": {
+                    "format": {
+                        "suffix": "GB"
+                    }
+                }
+			}
+		]
+	},
+	"legend": {
+		"enabled": false,
+		"layout": "horizontal",
+		"colors": [
+			"#60B661"
+		],
+		"fontSize": 12,
+		"hAlign": "center"
+	},
+	"chart": {
+		"axes": {
+			"rotated": true,
+			"xaxis": {
+				"categories": [
+					"Bilala Kulkarni",
+					"George Francis",
+					"Nishanth Kumar",
+					"Ranjith Kumar",
+					"Jaya Prakash",
+					"Ragupati T",
+					"Murali Krishna K",
+					"Mohan Muragan",
+					"Super Admin"
+				],
+				"label": false,
+				"ticklabel": {
+					"alignMode": "rotate",
+					"fontSize": 13,
+				}
+			},
+			"yaxis": [
+				{
+					"label": false,
+					"ticklabel": {
+						"fontSize": 12,
+					},
+					"maxRange": 13
+				}
+			]
+		},		
+		"plot": {
+			"plotoptions": {
+				"bar": {
+					"maxBandWidth": 8,
+					"interPadding": 0.2,
+					"datalabels": {
+						"stackLabels": {
+							"show": false
+						}
+					},
+					"border": {
+						"show": true,
+						"radius": "0 4 4 0"
+					}
+				}
+			}
+		},
+		"marginTop": 0,
+		"marginRight": 0,
+		"marginBottom": 0,
+		"marginLeft": 0
+	},
+	"canvas": {
+		"title": {
+			"show": false
+		},
+		"subtitle": {
+			"show": false
+		}
+	}
+}
+            // var chartObj = new $ZC.charts(container, data);  // call the function with container an
+
+        var chartObj = new $ZC.charts(container, data);
+        var form = document.forms.chart;
+        form.type.onchange = function() {
+        	data.seriesdata.chartdata[0].type = this.value;
+        	if(this.value === "web"){
+        		data = applyAxesPropForWeb(data);
+        	}else{
+        		data = resetAxesProp(data);
+        	}
+        	chartObj = new $ZC.charts(container, data);
+        }
+        function applyAxesPropForWeb(data){
+        	data.chart = {
+        		"axes":{
+        			"xaxis":{
+                        "grid":{
+                            "color":"black",
+                            "strokeWidth":0.7
+                        },
+                        "tickmark":{
+                            "color":"black",
+                            "strokeWidth":0.7
+                        },
+                        "axisline" : {
+                            "show" : false
+                        }
+                    },
+					"yaxis": [{
+                        "ticklabel":{
+                            "fontColor" : "transparent"
+                        },
+                        "grid":{
+                            "color":"grey",
+                            "strokeWidth":0.5
+                        },
+                        "label" : {
+                            "show" : false
+                        },
+                        "axisline" : {
+                            "show" : false
+                        },
+                        "tickmark":{
+                            "color" : "transparent"
+                        }
+                    }]
+        		}
+        	}
+        	return data;
+        }
+        function resetAxesProp(data){
+        	data.chart = {
+        		"axes":{
+        			"xaxis":{},
+					"yaxis": [{}]
+        		}
+        	}
+        	return data;
+        }
+    }
+    </script>
+</body>
+
+</html>

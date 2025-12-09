@@ -1,0 +1,115 @@
+@import 'global/variables';
+@import 'global/mixins';
+
+$sidebarname: '.zmrsubmenu';
+
+#{$sidebarname}{
+	&-container{
+		@include flex(flex column);
+		padding: 0 $space12;
+		white-space: nowrap;
+		width: rem(230px);
+		min-width: rem(230px);
+		box-sizing: border-box;
+		@include webkit(transition, $transitionDefault);
+		background-color: $appLHSBG;
+		border-right: 1px solid $appLHSRightBorder;
+		padding-top: $space12;
+		> ul{
+			flex: 1 1 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			scrollbar-width: thin;
+			scrollbar-color: $appScrollBarColor transparent;
+			.zmLHSDark &{
+				$appScrollBarBG: #1f2023;
+				$appScrollBarColor: #3c3f43;
+				&::-webkit-scrollbar-thumb {
+					background: transparent;
+				}
+				&::-webkit-scrollbar-track {
+					background: transparent;
+				}
+				&:hover::-webkit-scrollbar-thumb {
+					background: $appScrollBarColor;
+				}
+				&:hover::-webkit-scrollbar-track {
+					background: $appScrollBarBG;
+				}
+			}
+			> li{
+				margin-bottom: rem(2px);
+				#{$sidebarname}{
+					&__nav{
+						padding: rem(7px) $space12 rem(10px);
+						@include flex(flex);
+						align-items: center;
+						border-radius: $radius4;
+						cursor: pointer;
+						color: $appLHSListColor;
+						transition: background-color $transitionTime3s $transitionEase;
+						&:hover{
+							color: $appLHSListSelectedColor;
+							background-color: $appLHSListHoverBG;
+						}
+						&.zmaccordion--expand-active, &.zmaccordion--expand-active:hover{
+							background-color: $appThemeColor500;
+							color: $appWhiteColor;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__title{
+		padding: $space4 $space8;
+		color: $appLHSListColor;
+		font-weight: $fontBold;
+		font-size: $fontSize12;
+		text-transform: uppercase;
+		margin-top: $space12;
+	}
+	&__search{
+		--app-input-box-filled-bg: #{$appLHSListHoverBG};
+		--app-input-box-filled-hover-bg: #{$appLHSListHoverBG};
+		margin-bottom: $space12;
+		.zmtext{
+			&__adorn{
+				color: $appDisabledColor;
+			}
+			&__box{
+				color: $appLHSListColor;
+			}
+		}
+	}
+	&__item{
+		--zmaccordion-padding-x: 0px;
+		> ul{
+			margin-top: rem(2px);
+		}
+		> li {
+			margin: 0 $space12 rem(2px);
+			&:first-child{
+				margin-top: $space4;
+			}
+			.zmrsubmenu__subnav{
+				--zmdefault-button-flat-hover-text-color : #{$appLHSListSelectedColor};
+				--zmdefault-button-flat-hover-bg: #{$appLHSListHoverBG};
+				
+				@include flex(flex);
+				padding: $space8 $space12;
+				color: $appLHSListColor;
+				transition: background-color $transitionTime3s $transitionEase;
+				border-radius: $radius4;
+				width: 100%;
+			}
+			&.current, &.current:hover{
+				.zmrsubmenu__subnav{
+					background-color: transparent !important;
+					color: $appThemeColor500 !important;
+					font-weight: $fontBold;
+				}
+			}
+		}
+	}
+}

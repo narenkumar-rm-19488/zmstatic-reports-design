@@ -1,0 +1,131 @@
+// Grey color variable names
+$grey10: --app-grey-10;
+$grey20: --app-grey-20;
+$grey50: --app-grey-50;
+$grey100: --app-grey-100;
+$grey200: --app-grey-200;
+$grey300: --app-grey-300;
+$grey400: --app-grey-400;
+$grey500: --app-grey-500;
+$grey600: --app-grey-600;
+$grey700: --app-grey-700;
+$grey800: --app-grey-800;
+$grey900: --app-grey-900;
+
+// Common
+$bg: --app-bg;
+$bgRGB: --app-bg-rgb;
+$border: --app-border-color;
+$borderLight: --app-border-color-light;
+$borderDark: --app-border-color-dark;
+$iconColor: --app-icon-color;
+$seperatorColor: --app-separator-color;
+$hilightBg: --app-highlight-bg;
+$disabledColor: --app-disabled-color;
+$disabledBg: --app-disabled-bg;
+$inputBoxBorder: --app-input-box-border-color;
+$inputBoxHoverBorder: --app-input-box-hover-border-color;
+$inputBoxFilledBg: --app-input-box-filled-bg;
+$inputBoxFilledHoverBg: --app-input-box-filled-hover-bg;
+$inputBoxPlaceholderColor: --app-input-box-placeholder-color;
+$focusOutlineColor: --app-focus-outline-color;
+
+// Text
+$textColor: --app-text-color;
+$textColorDark: --app-text-color-dark;
+$textColorLight: --app-text-color-light;
+$textColorTitle: --app-text-color-title;
+$textColorCritical: --app-text-color-critical;
+
+// Hyperlink
+$hyperlinkColor: --app-hyperlink-color;
+
+// List
+$listHeaderBg: --app-list-header-bg;
+$listHeaderBorder: --app-list-header-border-color;
+$listHeaderColor: --app-list-header-color;
+$listBorder: --app-list-border-color;
+$listHoverBg: --app-list-hover-bg;
+$listHoverBgDark: --app-list-hover-bg-dark;
+$listCheckedBg: --app-list-checked-bg;
+$listArchivedBg: --app-list-archived-bg;
+$listArchivedTextColor: --app-list-archived-text-color;
+$boxBorder: --app-box-border-color;
+$boxBg: --app-box-bg;
+$boxShadowColor: --app-box-shadow-color;
+
+// Preview
+$botPvTitleBg: --bottom-preview-title-bg;
+$previewDepthShadow: --preview-depth-shadow-opacity;
+$previewScrolledShadow: --preview-scrolled-shadow-opacity;
+
+// Layout
+$rhsBarBg: --app-rhsbar-bg;
+$rhsBarBorder: --app-rhsbar-border-color;
+
+// Dropdown
+$ddBorder: --app-dd-border-color;
+
+// Alert
+$successColor: --app-success-color;
+$errorColor: --app-error-color;
+$infoColor: --app-info-color;
+$warningColor: --app-warning-color;
+
+// Alert Bg
+$successBg: --app-standard-success-bg;
+$errorBg: --app-standard-error-bg;
+$infoBg: --app-standard-info-bg;
+$warningBg: --app-standard-warning-bg;
+
+//Class Names
+$appearanceLight: ".zmAppLight";
+$appearanceDark: ".zmAppDark";
+$appearanceLightinLHSDark: ".zmAppLightinLHSDark";
+
+//Header
+$appHeaderBG: --app-header-bg;
+$appHeaderLogoBG: --app-header-logo-bg;
+$appHeaderLogoColor: --app-header-logo-color;
+
+//LHS
+$appLHSBorder: --app-lhs-right-border;
+
+//Background
+$appBodyColor: --app-body-bg;
+$appChangeBG: --app-alternate-bg;
+$appTransBG: --app-alternate-trans-bg;
+$appUserPanelGreyBG: --app-user-panel-bg;
+$appSubmenuColor: --app-submenu-bg;
+$appToggleColor: --app-toggle-bg;
+$appSearchColor: --app-searchBox-bg;
+$appSearchBor: --app-searchBox-border;
+
+//Loading
+$appLoadingBG: --app-skeleton-background;
+$appShineColor: --app-skeleton-shine-color;
+$appTblShineColor: --app-skeleton-table-shine-color;
+
+//LHS
+$appNLHSBG                 : --app-lhs-bg;
+$appNLHSListHoverBG        : --app-lhs-list-hover-bg;
+$appNLHSListSelectedBG     : --app-header-logo-bg;
+$appNLHSListColor          : --app-lhs-list-color;
+$appNLHSListSelectedColor  : --app-lhs-list-selected-color;
+$appNLHSDivider            : --app-lhs-list-hover-bg;
+$appLHSBorder              : --app-lhs-right-border;
+
+//AppBar
+$appbarlistBG                  : --app-bar-bg;
+
+//Note
+$appNoteColor: --app-note-bg;
+$appNoteBro: --app-note-border;
+$appNoteYColor: --app-yellow-note-bg;
+$appNoteYBro: --app-yellow-note-border;
+$appNoteRColor: --app-red-note-bg;
+$appNoteRBro: --app-red-note-border;
+
+//Scrollbar
+$scrollBarBG: --scrollBarBG;
+$scrollThumbBG: --scrolThumbBG;

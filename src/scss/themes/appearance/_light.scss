@@ -1,0 +1,52 @@
+#{$appearanceLight}{
+    //Header
+    #{$appHeaderBG}: #fff;
+
+    //Background
+    #{$appChangeBG}: #fff;
+    #{$appTransBG}: #fff;
+    #{$appSubmenuColor}: #F7F8FA;
+    #{$grey10} : #F7F8FA;
+    #{$appToggleColor}: #A1A4AA;
+    #{$appSearchColor}: #fff;
+    #{$appSearchBor}: #E4E5E7;
+
+     //Profile
+    #{$appUserPanelGreyBG}: #f9f9f9;
+
+    //Body
+    #{$appBodyColor}: #fff;
+
+    //Note
+    #{$appNoteColor}: #FFF8ED;
+    #{$appNoteBro}: #FBE3BB;
+    #{$appNoteYColor}: #FFF8ED;
+    #{$appNoteYBro}: #FBE3BB;;
+    #{$appNoteRColor}: #fdf6f6;
+    #{$appNoteRBro}: #f4caca;
+
+    //Loading
+    #{$appLoadingBG}: #E4E5E7;
+    #{$appShineColor}: #F2F3F4;
+}
+
+#{$lhsLight} {
+    //Logo
+    #{$appHeaderLogoBG}: #eef0f2;
+	#{$appHeaderLogoColor}: #000;
+
+    //LHS
+    #{$appLHSBorder}: #e7e7e7;
+	
+	#{$appbarlistBG}: #eef0f2;
+}
+
+#{$appearanceLight},
+#{$lhsLight},
+#{$lhsZohoOne} {
+    #{$textColorCritical}: #d80a0a;
+}
+#{$appearanceLight} {
+    #{$scrollBarBG}: #F4F5F5;
+    #{$scrollThumbBG}: #E4E5E7;
+}

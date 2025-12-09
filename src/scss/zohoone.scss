@@ -1,0 +1,73 @@
+body.unifiedui-blue-theme .zmWrapper {
+  background: #363B4D;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmWrapper {
+  background: #1B1F28;
+}
+
+body.unifiedui-blue-theme .zmWrapper .zmCollapseLhs {
+  background: #2E3343 !important;
+  transition: none;
+}
+
+body.unifiedui-blue-theme .zmWrapper .zmAppsBar {
+  background: #2E3343;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmWrapper .zmCollapseLhs {
+  background: #14171E !important;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmWrapper .zmAppsBar {
+  background: #14171E;
+}
+
+body.unifiedui-blue-theme .zmWrapper .zmApps:first-child {
+  margin-top: 0;
+}
+
+body.unifiedui-blue-theme .zmWrapper .zmApps li.sel {
+  background-color: #363B4D;
+}
+
+body.unifiedui-blue-theme .zmWrapper .zmApps li:hover {
+  background-color: #363B4D;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmWrapper .zmApps li.sel {
+  background-color: #1B1F28;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmWrapper .zmApps li:hover {
+  background-color: #1B1F28;
+}
+
+body.unifiedui-blue-theme .zmWrapper .zmApps li.sel:before {
+  background-color: #80848E;
+}
+
+body.unifiedui-blue-theme .zmTreeNode:hover {
+  background-color: rgba(91, 97, 118, 0.7) !important;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmTreeNode:hover {
+  background-color: rgba(48, 53, 68, 0.7) !important;
+}
+
+body.unifiedui-blue-theme .zmTreeNode.zmCurTree {
+  background-color: #5B6176 !important;
+  color: #fff;
+}
+
+body.unifiedui-blue-theme.zmNightMode .zmTreeNode.zmCurTree {
+  background-color: #303544 !important;
+}
+
+body.unifiedui-blue-theme .zmTreeNode .zmTreeCount {
+  color: inherit;
+}
+
+.reportstest {
+  color: #fff;
+}

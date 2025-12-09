@@ -1,0 +1,1173 @@
+@import 'global/mixins';
+@import 'global/variables';
+
+$white: #FFF;
+$black: #000;
+
+:root {
+	--app-black-color      : #{$black};
+	--app-black-color-rgb  : #{HEXtoRGB($black)};
+	--app-white-color      : #{$white};
+	--app-white-color-rgb  : #{HEXtoRGB($white)};
+	
+	--h1-font-size  : #{rem(48px)};
+	--h2-font-size  : #{rem(40px)};
+	--h3-font-size  : #{rem(32px)};
+	--h4-font-size  : #{rem(28px)};
+	--h5-font-size  : #{rem(18px)};
+	--h6-font-size  : #{rem(16px)};
+	--zmdialog-z-index: 2000;
+	--zmdialog-padding: 24px;
+	--zminput-check-radio-icon-size: 17px;
+}
+
+html, body {
+    height: 100%;
+    margin : 0;
+    padding: 0;
+    overflow : hidden;
+}
+.zmAppLight, .zmAppDark {
+	color: $appTextColor;
+	background-color: $appBodyBG;
+}
+body{
+	font-size: $fontSize14;
+}
+
+ul,ol,li {list-style: none; margin: 0; padding: 0;}
+a,input,textarea {outline: 0;}
+a {
+	text-decoration: none; 
+	@include webkit(transition, $transitionDefault);
+	color: $appThemeColor400;
+	&:hover{
+		color: $appThemeColor500;
+	}
+}
+b.txtLink, .txtColor, .helpLink{
+	color: $appThemeColor400;
+	&:hover{
+		color: $appThemeColor500;
+	}
+}
+.helpLink{
+	i{
+		font-size: $fontSize14;
+	}
+}
+fieldset{
+	border: none;
+}
+ol{
+	margin: $space16 0 $space16;
+	@include rtl(margin-left, rem(40px), margin-right, rem(40px));
+	li{
+		list-style: decimal;
+		padding: $space8 0;
+	}
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.clear{clear: both;}
+
+p{
+    line-height: $lineHeight20;
+}
+h1{
+	font-size: $H1fontSize;
+	line-height: $lineHeight60;
+	margin: 0;
+}
+h2{
+	font-size: $H2fontSize;
+	line-height: $lineHeight52;
+	margin: 0;
+}
+h3{
+	font-size: $H3fontSize;
+	line-height: $lineHeight40;
+	margin: 0;
+}
+h4{
+	font-size: $H4fontSize;
+	line-height: $lineHeight36;
+	margin: 0;
+}
+h5{
+	font-size: $H5fontSize;
+	line-height: $lineHeight32;
+	margin: 0;
+}
+h6{
+	font-size: $H6fontSize;
+	line-height: $lineHeight28;
+	margin: 0;
+}
+
+$phColor: #{$appPlaceHolderColor};
+
+::-webkit-input-placeholder {
+  color: $phColor;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $phColor;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $phColor;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $phColor;
+}
+::-ms-input-placeholder { /* Edge */
+  color: $phColor;
+}
+:placeholder-shown { /* Standard one last! */
+  color: $phColor;
+}
+
+@mixin scrollbars($size) {
+	::-webkit-scrollbar {
+		width:  $size;
+		height: $size;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $appScrollBarColor;
+	}
+	::-webkit-scrollbar-track {
+		background: $appScrollBarBG;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: 0 0;
+	}
+}
+//@include scrollbars(6px);
+
+.zmr-main-container{
+	@include flex(flex column);
+	height: 100%;
+	&.zmr-cliqShow{
+		height: calc(100% - #{rem(28px)});
+	}
+}
+
+$pagename: '.zmrpage';
+$notename: '.zmrnote'; 
+
+#{$pagename}{
+	&-container{
+		@include flex(flex);
+		flex: 1;
+	}
+	&-contentarea{
+		flex: 1;
+		@include flex(flex row);
+		overflow: hidden;
+		.zmw-pageTitle + .zmw-progressMenu{
+			margin-top: $space16;
+		}
+	}
+}
+.zmrcontent-bg{
+	background-color: $appBG;
+}
+.zmrcontent-scrollbar{
+	overflow-y: auto;
+}
+.zmrcontent-container{
+	flex: 1;
+	@include flex(flex column);
+	height: 100%;
+	overflow: hidden;
+}
+.zmrcontent-scrollable{
+	flex: 1 1 0;
+}
+.zmrcontent-non-scrollable{
+	> .zmrform-section{
+		padding-bottom: 0;
+		padding-top: $space8;
+	}
+}
+.zmrcontent-section{
+	padding: $space24 $space32 0;
+	h5{
+		@include flex(flex);
+		align-items: center;
+		margin-bottom: $space4;
+		+ .zminput-control-label{
+			margin-top: $space8;
+			margin-bottom: $space16;
+			.zminput-control-label__text{
+				font-size: $fontSize16;
+				font-weight: $fontBold;
+			}
+		}
+	}
+	p{
+		margin: 0 0 $space16;
+		max-width: 100%;
+		+ h5{
+			margin-bottom: $space12;
+		}
+	}
+	.zmswitch{
+		margin: 0 $space8;
+	}
+}
+
+
+#quicksearch {
+    visibility: hidden;
+	&.show{
+		visibility: visible;
+	}
+}
+
+.zmasitetour{
+	&-dialog{
+		--zmdialog-padding: #{$space32};
+		.zmbtn--color{
+			color: $appTextColorLight;
+		}
+		.zmdialog{
+			background-image: url(../img/sitetour-bg.png);
+			background-size: 100% 100%;
+    		background-repeat: no-repeat;
+		}
+	}
+	&-content{
+		text-align: center;
+		p{
+			font-size: $fontSize16;
+			margin: $space4 0 $space32;
+		}
+	}
+	&-video{
+		width: 735px;
+		height: 415px;
+		background-color: #fff;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		box-shadow: 0 0 5px #fff;
+		overflow: hidden;
+	}
+}
+
+.zmrpolicies{
+    &-header{
+        @include flex(flex);
+		align-items: center;
+        padding: $space16 $space16 $space8;
+        h5{
+            flex: 1;
+        }
+    }
+    &-container{
+        @include flex(flex row);
+        height: 100%;
+    }
+    &-box{
+        flex-basis: 50%;
+        max-width: 50%;
+        &:last-child{
+            border-left: 1px solid $appBorderColor;
+        }
+        h6{
+            padding: 0 $space16 $space8;
+        }
+    }
+    &-title{
+        @include flex(flex);
+        h6{
+            padding: 0 $space16 $space8;
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+    }
+}
+
+.zmreports-table{
+	&-status{
+        &--success{
+            color: $appSuccessColor;
+            font-size: $fontSize14;
+		}
+        &--error{
+            color: $appErrorColor;
+            font-size: $fontSize10;
+		}
+	}
+}
+
+.zmrauditlog{
+	&-mobileview{
+		display: none;
+	}
+	&-demo{
+		background-color: #ccc;
+		height: calc(100% - 80px);
+		padding: 40px 0;
+		display: flex;
+		justify-content: center;
+		gap: 32px;
+	}
+	&-screen{
+		background-color: #f2f4f8;
+		border-radius: 45px;
+		border: 10px solid #332e2e;
+		width: 375px;
+		height: 100%;
+		position: relative;
+		box-sizing: border-box;
+		overflow: hidden;
+		.zmAppDark &{
+			--app-bg: #151D24;
+			--app-text-color: #82868A;
+    		--app-text-color-light: #82868A;
+			background-color: #040C14;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 150px;
+			height: 28px;
+			background-color: #332e2e;
+			border-radius: 14px;
+			z-index: 200;
+		}
+		.zmrauditlog{
+			&-innerheader{
+				border-bottom: 1px solid $appBorderColor;
+				padding: 48px 12px 12px;
+				background-color: $appBG;
+				box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
+				position: relative;
+				z-index: 10;
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				h1{
+					color: $appTextColorTitle;
+					line-height: 1;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	&-wrapper{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	&-header{
+		border-bottom: 1px solid $appBorderColor;
+		padding: 48px 12px 12px;
+		background-color: $appBG;
+		box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
+		position: relative;
+		z-index: 10;
+		.zmraction{
+			&-box{
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+			&-search{
+				flex: 1;
+			}
+			&-btn{
+				--zmbutton-margin-x-start: 0;
+			}
+		}
+		h1{
+			color: $appTextColorTitle;
+			line-height: 1;
+			font-size: 18px;
+			padding-bottom: 12px;
+        }
+	}
+	&-filter{
+		padding: 12px 8px;
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		&__label{
+
+		}
+		&__token{
+			--zmtoken-bg: #{$appBG};
+			--zmtoken-top-margin: 0;
+		}
+		&__text{
+			background-color: #{$appBG} !important;
+			span{
+				padding-top: 2px;
+				padding-bottom: 4px;
+				font-size: 13px;
+			}
+		}
+		+ .zmrauditlog-content{
+			padding-top: 0;
+		}
+	}
+	&-content{
+		flex: 1 1 auto;
+		overflow-y: auto;
+		padding-top: 8px;
+	}
+	&-innerheader{
+		border-bottom: 1px solid $appBorderColor;
+		padding: 16px 12px;
+		background-color: $appBG;
+		box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
+		position: relative;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		button{
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+		h1{
+			color: $appTextColorTitle;
+			line-height: 1;
+			font-size: 18px;
+			min-width: 0;
+			span{
+				display: block;
+				line-height: 1.2;
+				&:first-child{
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				&:last-child{
+					font-weight: normal;
+				}
+			}
+        }
+	}
+}
+.zmrlist{
+	display: flex;
+	flex-direction: column;
+	&__box{
+		background-color: $appBG;
+		border-bottom: 1px solid $appBorderColor;
+		padding: 12px;
+		position: relative;
+		&--line{
+			position: absolute;
+			left: -2px;
+			top: 0;
+			bottom: 0;
+			width: 4px;
+			height: 45px;
+			margin: auto;
+			border-radius: 3px;
+			background-color: #332e2e;
+		}
+		p{
+			margin: 0;
+			color: $appTextColor;
+			padding-top: 6px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			span{
+				color: $appTextColorTitle;
+				font-weight: 700;
+			}
+		}
+	}
+	&.zmrcard-type{
+		gap: 8px;
+		margin: 8px;
+		margin-top: 0;
+		.zmrlist__box{
+			border-radius: 4px;
+		}
+	}
+	&__title{
+		display: flex;
+		align-items: center;
+		min-width: 0;
+		gap: 8px;
+	}
+	&__category{
+		flex: 1;
+		font-size: 16px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: $appTextColorTitle;
+		font-weight: 700;
+	}
+	&__time{
+		flex-shrink: 0;
+		flex-grow: 0;
+		color: $appTextColorLight;
+		font-size: 13px;
+	}
+	&__performed{
+		color: #83858c;
+		font-size: 12px;
+		padding-top: 6px;
+	}
+}
+
+.zmrinformation{
+	margin: 12px;
+	&__box{
+		background-color: $appBG;
+		border-bottom: 1px solid $appBorderColor;
+		padding: 16px;
+		position: relative;
+		border-radius: 4px;
+		&:not(:last-child){
+			margin-bottom: 12px;
+		}
+		> p{
+			margin: 0;
+			color: $appTextColor;
+			padding-bottom: 12px;
+			span{
+				color: $appTextColorTitle;
+				font-weight: 700;
+			}
+		}
+	}
+	&__header{
+		display: flex;
+		align-items: center;
+		min-width: 0;
+		gap: 8px;
+	}
+	&__title{
+		flex: 1;
+		font-size: 16px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: $appTextColorTitle;
+		font-weight: 700;
+	}
+	&__time{
+		flex-shrink: 0;
+		flex-grow: 0;
+		color: $appTextColorLight;
+		font-size: 13px;
+	}
+	&__content{
+	}
+	&__list{
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+		padding: 12px 0;
+		&__label{
+			color: $appTextColorLight;
+		}
+		&__value{
+			color: $appTextColorTitle;
+			font-weight: 700;
+		}
+		&__info{
+			display: flex;
+			span{
+				&:first-child, &:nth-child(2){
+					display: inline-block;
+					flex-shrink: 0;
+				}
+				&:first-child{
+					width: 65px;
+				}
+				&:nth-child(2){
+					padding: 0 8px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.zmrauditlog{
+		&-demo{
+			display: none;
+		}
+		&-mobileview{
+			display: block;
+			height: 100%;
+			position: relative;
+			#zmrauditlog-view{
+				position: absolute;
+				left: 100%;
+				top: 0;
+				right: 0;
+				z-index: 10;
+				transition: left 0.3s ease-in-out;
+				&.isOpen{
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+.zmraddon{
+	align-items: center;
+    background-color: $appBG;
+    border: 1px solid $appBorderColor;
+    display: inline-flex;
+    transition: border-color .3s ease;
+    white-space: nowrap;
+	border-radius: 3px;
+	margin-inline-end: 7px;
+	margin-block-start: 4px;
+	flex-direction: column;
+	overflow: hidden;
+
+	span{
+		inline-size: 100%;
+		text-align: center;
+		box-sizing: border-box;
+		font-size: 12px;
+		padding: 1px 4px;
+	}
+	&__label{
+		
+		border-block-start: 1px solid $appBorderColor;
+		color: $appLabelTextColor;
+		background-color: $appGreyBG;
+		.zmAppDark &{
+			background-color: $appTableHeadBG;
+		}
+	}
+}
+
+.zmrsplit{
+	&-wrapper{
+		display: flex;
+		flex-direction: column;
+		block-size: 100%;
+	}
+	&__chart{
+		&__container{
+			flex: 1;
+			block-size: 100%;
+			border-block-start: 1px solid $appBorderColor;
+			&.hide{
+				display: none;
+			}
+		}
+	}
+	&__table{
+		&__container{
+			display: flex;
+			flex-direction: column;
+		    block-size: 330px;
+			&.hide{
+				block-size: 44px;
+			}
+		}
+		&__actionbar{
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			border-block-start: 1px solid $appBorderColor;
+			padding-block: $space8;
+			padding-inline: $space16 $space8;
+		}
+		&__title{
+			font-size: $fontSize16;
+			color: $appTextColorTitle;
+			font-weight: 700;
+		}
+		&__content{
+			flex: 1 1 0;
+			overflow-y: auto;
+		}
+	}
+	&-fullscreen{
+		.zmrsplit{
+			&__chart__container{
+				display: none;
+			}
+			&__table__container{
+				block-size: 100%;
+				min-block-size: 100%;
+			}
+		}
+	}
+}
+
+.durationDropDown {
+	margin-inline-end: $space8;
+	inline-size: fit-content;
+    --zmtext-box-width: auto;
+}
+.zmrtab-container{
+	padding: $space24 $space24 0;
+	border-bottom: 1px solid $appBorderColor;
+}
+
+.zmractivity{
+	&-wrapper{
+		padding: $space24;
+		display: flex;
+		flex-direction: column;
+		gap: $space24;
+	}
+	&__item{
+		border: 1px solid $appBorderColor;
+		padding: $space8 $space16;
+		border-radius: $radius4;
+		.zmrdashboard{
+			&-card{
+				border-block-end: none;
+			}
+		}
+	}
+	&__chart{
+		padding-block-end: $space16;
+	}
+	&__card{
+		display: flex;
+		gap: $space32;
+		margin-block: $space8 $space16;
+		&__item{
+			flex: 1 1 0;
+			border: 1px solid $appBorderColor;
+			border-radius: $radius4;
+			overflow: hidden;
+		}
+		&__box{
+			display: flex;
+			align-items: center;
+			gap: $space16;
+			padding: $space12 $space16;
+			--zmci-font-size: 32px;
+			&--green{
+				background: linear-gradient(to right, #fff 50%, #ECFCEC);
+			}
+			&--blue{
+				background: linear-gradient(to right, #fff 50%, #f2f8ff);
+			}
+			&--yellow{
+				background: linear-gradient(to right, #fff 50%, #fffaec);
+			}
+		}
+		&__info{
+			display: flex;
+			flex-direction: column;
+		}
+		&__text{
+			font-size: $fontSize18;
+		}
+		&__label{
+			color: $appTextColorLight;
+		}
+		&__row{
+			display: flex;
+			border-block-start: 1px solid $appBorderColor;
+		}
+		&__col{
+			flex: 1 1 0;
+			padding: $space12 $space16;
+			&:not(:first-child){
+				border-inline-start: 1px solid $appBorderColor;
+			}
+		}
+	}
+	&__grid{
+		display: flex;
+		gap: 80px;
+		padding: $space16;
+		&__item{
+			flex: 1 1 0;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			position: relative;
+			&:not(:first-child){
+				&::before{
+					content: "";
+					position: absolute;
+					inset-block: 0;
+					inset-inline-start: -40px;
+					margin: auto;
+					block-size: 70px;
+					inline-size: 1px;
+					background: $appBorderColor;
+				}
+			}
+		}
+		&__box{
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			&--green{
+				color: $appSuccessColor;
+			}
+			&--blue{
+				color: $appInfoColor;
+			}
+			&--yellow{
+				color: $appWarningColor;
+			}
+		}
+		&__icon{
+			--zmci-font-size: 24px;
+		}
+		&__title{
+			font-size: $fontSize18;
+		}
+		&__row{
+			display: flex;
+			justify-content: space-between;
+			gap: 8px;
+		}
+		&__info{
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+		&__text{
+			font-size: rem(24px);
+			font-weight: 500;
+		}
+		&__label{
+			color: $appTextColorLight;
+		}
+	}
+}
+
+.zmrviewdata{
+	&-dialog{
+		--zmdialog-padding: 3px;
+	}
+	&-wrapper{
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	&__header{
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		justify-content: center;
+		padding: $space24;
+		padding-block-end: $space16;
+		--h2-font-size: 24px;
+		background: linear-gradient(180deg, rgba($appThemeColor400rgb, 0.25) 5%, transparent);
+		.zmAppDark &{
+			background: linear-gradient(180deg, transparent 5%, transparent);
+		}
+	}
+	&__container{
+		display: flex;
+		flex-direction: column;
+	}
+	&__contnet{
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: $space24;
+		padding-block-start: 0;
+		text-align: center;
+		--zmbutton-padding-y: 8px;
+		--zmbutton-padding-x: 12px;
+		p{
+			margin: 0;
+		}
+	}
+	&__icon{
+		--zmci-font-size: 32px;
+	}
+}
+
+.zmrdatenavigator{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-block-start: $space12;
+	&-box{
+		background-color: $appThemeColor100;
+		border-radius: 4px;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.01);
+		block-size: $space32;
+		display: flex;
+		align-items: center;
+		gap: $space4;
+		--zmbutton-padding-y: #{$space4};
+		--zmbutton-padding-x: #{$space4};
+		--zmbutton-margin-x-start: 0;
+		--zmci-font-size: 18px;
+	}
+	&__text{
+		font-weight: 700;
+	}
+}
+
+.zmrback {
+	&-btn {
+		--zmci-font-size: 24px;
+		padding-inline-start: 0 !important;
+        position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			inline-size: 1px;
+			block-size: 24px;
+            margin: auto;
+			inset-block: 0;
+			inset-inline-end: 0;
+			background: $appSeparatorColor;
+		}
+	}
+}
+
+.zmw-dotCWrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: $appBG;
+	padding: 3px 6px;
+	border: 1px solid $appBorderColor;
+	inline-size: 100px;
+	white-space: nowrap;
+	.zmw-proTxt{
+		font-size: $fontSize12;
+		padding-inline-start: $space8;
+	}
+}
+.zmw-dotCBar{
+	position: relative;
+	background: $appBorderColor;
+	block-size: 8px;
+	inline-size: 52px;
+	.zmw-dotProgress{
+		position: absolute;
+		block-size: 100%;
+		transition: width .4s ease-in;
+		inline-size: 8%;
+		background-color: #2c66dd;
+		z-index: 1;
+		&.failure{
+			background-color: #f44336 !important;
+		}
+		&.warning{
+			background-color: #ff9800 !important;
+		}
+		&.normal{
+			background-color: #4caf50 !important;
+		}
+	}
+	.dot{
+		position: relative;
+		inline-size: 5%;
+		block-size: 8px;
+		margin-inline-start: 16%;
+		background-color: $appBG;
+		float: inline-start;
+		z-index: 2;
+	}
+}
+
+.zmrselectduration-box, .zmrselectbuilding-box {
+	inline-size: fit-content;
+    --zmtext-box-width: auto;
+}
+
+.zmrtraffic{
+	&__checkbox{
+		align-self: center;
+		margin-inline-end: $space4;
+		--zminput-control-label-font-size: #{rem(12px)};
+		--zminput-control-label-align-items: center;
+	}
+	&__accordion{
+		--zmaccordion-padding-x: #{$space8};
+		--zmaccordion-padding-y: 0;
+		--zmci-font-size: #{rem(24px)};
+		--zmaccordion-title-margin-left: 0;
+		--zmaccordion-header-margin-y-end: #{$space12};
+		padding-block-start: $space8;
+		&__item{
+			&:not(:last-child){
+				border-block-end: 1px solid $appBorderColor;
+				margin-block-end: $space8;
+			}
+			.zmrtraffic__container{
+				padding-inline: $space8;
+				padding-block: $space4 $space16;
+			}
+		}
+		button{
+			align-items: flex-start;
+		}
+		&__info{
+			display: flex;
+			flex-direction: column;
+			gap: $space4;
+			inline-size: 100%;
+			padding-block-start: $space4;
+		}
+		&__email{
+			color: $appTextColorLight;
+		}
+		&__name{
+			--zmbadge-padding-y: 2px;
+		}
+	}
+	&__container{
+		display: flex;
+		flex-direction: column;
+		gap: $space16;
+		padding: $space16;
+	}
+	&__box{
+		background-color: $appGreyBG;
+		border: 1px solid $appBorderColor;
+		border-radius: 8px;
+		position: relative;
+		&:hover, &:focus-within{
+			.zmrtraffic__showoriginal{
+				opacity: 1;
+			}
+		}
+	}
+	&__showoriginal{
+		position: absolute;
+		inset-block-start: 8px;
+		inset-inline-end: 8px; 
+		opacity: 0;
+        transition: opacity .3s ease;
+		--zmci-font-size: #{rem(14px)};
+	}
+	&__listing{
+		display: flex;
+		flex-direction: column;
+		gap: $space16;
+		padding: $space16;
+		&:not(:last-child){
+			border-block-end: 1px solid $appBorderColor;
+		}
+	}
+	&__row{
+		display: flex;
+		align-items: center;
+		gap: $space24;
+	}
+	&__label{
+		flex-basis: 120px;
+		color: $appTextColorLight;
+		display: flex;
+		align-items: center;
+		gap: $space12;
+		--zmci-font-size: 16px;
+	}
+	&__value{
+		flex: 1;
+	}
+	&__badge{
+		display: flex;
+		align-items: center;
+		gap: $space8;
+		flex-wrap: wrap;
+		&__item{
+			background-color: $appGreyDarkBG;
+			border-radius: 20px;
+			padding: $space4 $space8;
+			font-size: $fontSize12;
+			span{
+				&:first-child{
+					color: $appTextColorLight;
+				}
+				&:last-child{
+					padding-inline-start: $space4;
+				}
+				
+			}
+		}
+		&__success{
+			color: $appSuccessColor;
+		}
+		&__error{
+			color: $appErrorColor;
+		}
+	}
+	&__action{
+		--zmtext-box-outlined-bg: #{$appBG};
+		inline-size: 250px;
+	}
+}
+
+.zmrstorage{
+	&__card{
+		display: flex;
+		gap: 24px;
+		padding: 32px;
+		&__item{
+			flex: 1 1 0;
+			border: 1px solid $appBorderColor;
+			border-radius: 8px;
+			overflow: hidden;
+			padding: 24px;
+		}
+		&__title{
+			font-size: $fontSize16;
+			font-weight: 700;
+			margin-block-end: 16px;
+		}
+		&__info{
+			display: flex;
+			gap: 16px;
+		}
+		&__row{
+			flex: 1;
+			display: flex;
+			gap: 32px;
+		}
+		&__col{
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+		&__pluse{
+			font-size: $fontSize16;
+			color: $appTextColorLight;
+		}
+		&__label{
+			color: $appTextColorLight;
+			font-size: $fontSize13;
+		}
+		&__value{
+			font-size: $fontSize16;
+			font-weight: 700;
+		}
+		&__total{
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			gap: 2px;
+			border-inline-start: 1px solid $appBorderColor;
+			padding-inline-start: 24px;
+			&__label{
+				color: $appTextColorLight;
+				font-size: $fontSize13;
+			}
+			&__value{
+				font-size: $fontSize20;
+				font-weight: 700;
+			}
+		}
+	}
+}

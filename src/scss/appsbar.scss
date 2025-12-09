@@ -1,0 +1,110 @@
+@import 'global/variables';
+@import 'global/mixins';
+
+$appsbarname: '.zmrapps';
+
+#{$appsbarname}{
+	width: rem(80px);
+	min-width: rem(80px);
+	@include flex(flex column);
+	background-color: $appBarBG;
+	&-scrollbar{
+		flex: 1 1 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: $appScrollBarColor transparent;
+		.zmLHSDark &{
+			$appScrollBarBG: #1f2023;
+			$appScrollBarColor: #3c3f43;
+			&::-webkit-scrollbar-thumb {
+				background: transparent;
+			}
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+			&:hover::-webkit-scrollbar-thumb {
+				background: $appScrollBarColor;
+			}
+			&:hover::-webkit-scrollbar-track {
+				background: $appScrollBarBG;
+			}
+		}
+		> ul{
+			> li{
+				position: relative;
+				#{$appsbarname}__nav{
+					--zmdefault-button-flat-hover-bg: transparent;
+					--zmdefault-button-flat-hover-text-color: #{$appLHSListSelectedColor};
+					
+					padding: $space12 $space4;
+					text-align: center;
+					color: $appLHSListColor;
+					cursor: pointer;
+					@include webkit(transition, $transitionDefault);
+					display: block;
+					width: 100%;
+					.zmbtn__icon{
+						font-size: $fontSize18;
+					}
+					.zmbtn__text{
+						font-size: rem(11px);
+						display: block;
+						padding-top: rem(2px);
+						white-space: initial;
+						overflow: initial;
+						@include rtl(padding-left, 0, padding-right, 0);
+					}
+				}
+				&:hover{
+					#{$appsbarname}__nav{
+						color: $appLHSListSelectedColor;
+					}
+				}
+				&#{$appsbarname}__active{
+					#{$appsbarname}__nav, #{$appsbarname}__nav:hover{
+						color: $appLHSListSelectedColor !important;
+						background-color: $appLHSBG !important;
+					}
+					&:before{
+						content: "";
+						position: absolute;
+						top: 0;
+						@include rtl(left, 0, right, 0);
+						bottom: 0;
+						width: rem(2px);
+						background-color: $appThemeColor500;
+					}
+				}
+			}
+		}
+	}
+}
+
+.zmrsettings-section{
+	border-top: 1px solid $appLHSDivider;
+	.zmrsetting-btn{
+		--zmdefault-button-flat-hover-bg: transparent;
+		--zmdefault-button-flat-hover-text-color: #{$appLHSListSelectedColor};
+
+		padding: $space12 $space4;
+		text-align: center;
+		color: $appLHSListColor;
+		cursor: pointer;
+		@include webkit(transition, $transitionDefault);
+		display: block;
+		width: 100%;
+		&:hover{
+			color: $appLHSListSelectedColor;
+		}
+		.zmbtn__icon{
+			font-size: $fontSize18;
+		}
+		.zmbtn__text{
+			font-size: 11px;
+			display: block;
+			padding-top: rem(2px);
+			@include rtl(padding-left, 0, padding-right, 0);
+		}
+	}
+}

@@ -1,0 +1,408 @@
+@font-face {
+    font-family: "ZMARI";
+    src: url(../img/fonts/ZMARI.woff2)format('woff2'), url(../img/fonts/ZMARI.woff)format('woff');
+}
+
+[class^="zmri-"], [class*=" zmri-"] {
+  font-family: 'ZMARI' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+    
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    i{
+      font-style: normal;
+    }
+}
+
+$icon: ".zmri";
+
+#{$icon}-warning:before {
+	content: "\e900";
+}
+#{$icon}-larrow:before {
+	content: "\e901";
+}
+#{$icon}-edit:before {
+	content: "\e902";
+}
+#{$icon}-filter:before {
+	content: "\e903";
+}
+#{$icon}-export:before {
+	content: "\e904";
+}
+#{$icon}-controls:before {
+	content: "\e905";
+}
+#{$icon}-help:before {
+	content: "\e906";
+}
+#{$icon}-search:before {
+	content: "\e907";
+}
+#{$icon}-favorite:before {
+	content: "\e908";
+}
+#{$icon}-favoritesel:before {
+	content: "\e909";
+}
+#{$icon}-domain:before {
+	content: "\e90a";
+}
+#{$icon}-groups:before {
+	content: "\e90b";
+}
+#{$icon}-mailout:before {
+	content: "\e90c";
+}
+#{$icon}-restore:before {
+	content: "\e90d";
+}
+#{$icon}-opentab:before {
+	content: "\e90e";
+}
+#{$icon}-user:before {
+	content: "\e90f";
+}
+#{$icon}-tick:before {
+	content: "\e910";
+}
+#{$icon}-close:before {
+	content: "\e911";
+}
+#{$icon}-refresh:before {
+	content: "\e912";
+}
+#{$icon}-policy:before {
+	content: "\e913";
+}
+#{$icon}-linechart:before {
+	content: "\e914";
+}
+#{$icon}-barchart:before {
+	content: "\e915";
+}
+#{$icon}-stackchart:before {
+	content: "\e916";
+}
+#{$icon}-piechart:before {
+	content: "\e917";
+}
+#{$icon}-areachart:before {
+	content: "\e918";
+}
+#{$icon}-dashboard:before {
+	content: "\e919";
+}
+#{$icon}-clouddown:before {
+	content: "\e91a";
+}
+#{$icon}-fullscreen:before {
+	content: "\e91b";
+}
+#{$icon}-exitfullscreen:before {
+	content: "\e91c";
+}
+#{$icon}-eyeline:before {
+	content: "\e91d";
+}
+#{$icon}-eyehideline:before {
+	content: "\e91e";
+}
+#{$icon}-schedule:before {
+	content: "\e91f";
+}
+#{$icon}-mailadmin {
+	&:before {
+		content: "\e920";
+		color: rgb(53, 116, 185);
+	}
+	&:after {
+		content: "\e921";
+		margin-left: -1em;
+		color: rgb(248, 177, 28);
+	}
+}
+#{$icon}-mail {
+	&:before {
+		content: "\e922";
+		color: rgb(242, 175, 28);
+	}
+	&:after {
+		content: "\e923";
+		margin-left: -1em;
+		color: rgb(35, 111, 178);
+	}
+}
+#{$icon}-star:before {
+	content: "\e924";
+}
+
+#{$icon}-starfill:before {
+	content: "\e925";
+}
+
+#{$icon}-rarrow:before {
+	content: "\e926";
+}
+
+#{$icon}-themes:before {
+	content: "\e927";
+}
+
+#{$icon}-nightmode:before {
+	content: "\e928";
+}
+
+#{$icon}-notify:before {
+	content: "\e929";
+}
+
+#{$icon}-vdots:before {
+	content: "\e92a";
+}
+
+#{$icon}-faq:before {
+	content: "\e92b";
+}
+
+#{$icon}-failed:before {
+	content: "\e92c";
+}
+
+#{$icon}-verified:before {
+	content: "\e92d";
+}
+
+#{$icon}-progress:before {
+	content: "\e92e";
+}
+
+#{$icon}-closed:before {
+	content: "\e92f";
+}
+#{$icon}-admin{
+	&:before {
+		content: "\e930";
+	}
+	&:after {
+		content: "\e931";
+		margin-left: -1em;
+		color: rgb(230, 78, 78);
+	}
+}
+#{$icon}-customadmin{
+	&:before {
+	  content: "\e932";
+	}
+	&:after {
+	  content: "\e933";
+	  margin-left: -1em;
+	  color: rgb(74, 144, 226);
+	}
+}
+#{$icon}-superadmin{
+	&:before {
+	  content: "\e934";
+	}
+	&:after {
+	  content: "\e935";
+	  margin-left: -1em;
+	  color: rgb(251, 165, 24);
+	}
+}
+
+#{$icon}-logs:before {
+	content: "\e936";
+}
+
+#{$icon}-security:before {
+	content: "\e937";
+}
+
+#{$icon}-statistics:before {
+	content: "\e938";
+}
+
+#{$icon}-settings:before {
+	content: "\e939";
+}
+
+#{$icon}-myfavorite:before {
+	content: "\e93a";
+}
+
+#{$icon}-organization:before {
+	content: "\e93b";
+}
+
+#{$icon}-timer:before {
+	content: "\e93c";
+}
+
+#{$icon}-task:before {
+	content: "\e93d";
+}
+
+#{$icon}-widgetpluse:before {
+	content: "\e93e";
+}
+
+#{$icon}-compliance:before {
+	content: "\e93f";
+}
+
+#{$icon}-mailread:before {
+	content: "\e940";
+}
+
+#{$icon}-mailunread:before {
+	content: "\e941";
+}
+
+#{$icon}-widgetminus:before {
+	content: "\e942";
+}
+
+#{$icon}-favourite:before {
+	content: "\e943";
+}
+
+#{$icon}-collaborative:before {
+	content: "\e944";
+}
+
+#{$icon}-flash:before {
+	content: "\e945";
+}
+
+#{$icon}-calendar:before {
+	content: "\e946";
+}
+
+#{$icon}-logsnew:before {
+	content: "\e947";
+}
+
+#{$icon}-emailpolicy:before {
+	content: "\e948";
+}
+
+#{$icon}-partners:before {
+	content: "\e949";
+}
+#{$icon}-backup:before {
+	content: "\e94a";
+}
+#{$icon}-aworkdrive:before {
+	content: "\e94b";
+	color: #256fb2;
+}
+#{$icon}-aretention:before {
+	content: "\e94c";
+	color: #256fb2;
+}
+#{$icon}-news:before {
+	content: "\e94d";
+}
+#{$icon}-screenshot:before {
+	content: "\e94e";
+}
+#{$icon}-cliq:before {
+	content: "\e94f";
+	color: #fff;
+}
+#{$icon}-share:before {
+	content: "\e950";
+}
+#{$icon}-upload:before {
+	content: "\e951";
+}
+#{$icon}-view:before {
+	content: "\e952";
+}
+#{$icon}-filecreated:before {
+	content: "\e953";
+}
+#{$icon}-foldercreated:before {
+	content: "\e954";
+}
+#{$icon}-folder:before {
+	content: "\e955";
+}
+#{$icon}-update:before {
+	content: "\e956";
+}
+#{$icon}-images:before {
+	content: "\e957";
+}
+#{$icon}-zipfile:before {
+	content: "\e958";
+}
+#{$icon}-writer:before {
+	content: "\e959";
+	color: #226db4;
+}
+#{$icon}-sheet:before {
+	content: "\e95a";
+	color: #089949;
+}
+#{$icon}-show:before {
+	content: "\e95b";
+	color: #e42527;
+}
+#{$icon}-pdf:before {
+	content: "\e95c";
+	color: #fb3449;
+}
+#{$icon}-fileupload:before {
+	content: "\e95d";
+}
+#{$icon}-recurring:before {
+  content: "\e95e";
+}
+#{$icon}-theme:before {
+	content: "\e95f";
+}
+#{$icon}-workdrive:before {
+	content: "\e960";
+}
+#{$icon}-quickaccess:before {
+	content: "\e961";
+}
+#{$icon}-historic-data:before {
+	content: "\e962";
+}
+#{$icon}-ediscovery-show:before {
+	content: "\e963";
+}
+#{$icon}-ediscovery-hide:before {
+	content: "\e964";
+}
+#{$icon}-mail-incoming:before {
+	content: "\e965";
+}
+#{$icon}-mail-outgoing:before {
+	content: "\e966";
+}
+#{$icon}-apple:before {
+	content: "\e967";
+}
+#{$icon}-android:before {
+	content: "\e968";
+}
+#{$icon}-virus-rejections:before {
+	content: "\e969";
+}
+#{$icon}-helpdesk:before {
+	content: "\e96a";
+}
+#{$icon}-phone:before {
+	content: "\e96b";
+}

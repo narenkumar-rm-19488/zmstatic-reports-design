@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Admin Reports</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="//zmstatic/mockups/component/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../css/local-fonts.css" rel="stylesheet" type="text/css">
+    <link href="../css/icons.css" rel="stylesheet" type="text/css">
+    <link href="../css/themes.css" rel="stylesheet" type="text/css">
+    <link href="../css/layout.css" rel="stylesheet" type="text/css">
+    <link href="../css/header.css" rel="stylesheet" type="text/css">
+    <link href="../css/appsbar.css" rel="stylesheet" type="text/css">
+    <link href="../css/sidebar.css" rel="stylesheet" type="text/css">
+    <link href="../css/actionbar.css" rel="stylesheet" type="text/css">
+    <link href="../css/reportstable.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="zmf-lato zmAppLight zmThmBlue zmLHSDark">
+    <main class="zmr-main-container">
+        <header class="zmrheader">
+            <div class="zmrheader__brand">
+                <div class="zmrheader__logo">
+                    <i class="zmri-mailadmin"></i>
+                    <span class="zmrheader__name">Admin Reports</span>
+                </div>
+            </div>
+            <div class="zmrheader__info">
+                <div class="zmrpage-title">
+                    <span class="zmrpage-text"><span>User Summary</span><button
+                            class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+                                class="zmri-star zmbtn__icon"></i></button></span>
+                </div>
+                <div class="zmrheader__nav">
+                    <ul>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat quickopenbtn"><i
+                                    class="zmri-search zmbtn__icon"></i></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat pulse-effect"><i
+                                    class="zmri-clouddown zmbtn__icon"></i></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+                                    class="zmri-help zmbtn__icon"></i></button></li>
+                        <li class="zmrheader__nav-img">
+                            <div class="zmavatar zmavatar--md zmavatar--circle">
+                                <div class="zmavatar__image-wrapper"><img class="zmavatar__image" alt=""
+                                        src="../img/user-thumbnail.png"></div>
+                                <i class="zmuseravailability available"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="zmrpage-container">
+            <div class="zmrapps">
+                <div class="zmrapps-scrollbar">
+                    <ul>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='dashboard.html'"><i class="zmbtn__icon zmri-dashboard"></i><span
+                                    class="zmbtn__text">Dashboard</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-favourite"></i><span
+                                    class="zmbtn__text">Favourites</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='users.html'"><i class="zmbtn__icon zmri-user"></i><span
+                                    class="zmbtn__text">Users</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='addon-storage.html'"><i
+                                    class="zmbtn__icon zmri-mailunread"></i><span
+                                    class="zmbtn__text">Mailbox</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='threat-traffic-preview.html'"><i
+                                    class="zmbtn__icon zmri-statistics"></i><span class="zmbtn__text">Email
+                                    Statistics</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-groups"></i><span class="zmbtn__text">Groups</span></button>
+                        </li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='audit-logs.html'"><i class="zmbtn__icon zmri-logsnew"></i><span
+                                    class="zmbtn__text">Logs</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-security"></i><span
+                                    class="zmbtn__text">Compliance</span></button></li>
+                        <li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+                                    class="zmbtn__icon zmri-collaborative"></i><span class="zmbtn__text">Collaborative
+                                    Apps</span></button></li>
+                        <li class="zmrapps__active"><button
+                                class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+                                onclick="location.href='activity-summary.html'"><i
+                                    class="zmbtn__icon zmri-organization"></i><span
+                                    class="zmbtn__text">Organization</span></button></li>
+                        <!--<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>
+							<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-security"></i><span class="zmbtn__text">Security</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>-->
+                    </ul>
+                </div>
+                <div class="zmrsettings-section"><button
+                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsetting-btn"
+                        onclick="location.href='settings.html'"><i class="zmbtn__icon zmri-controls"></i><span
+                            class="zmbtn__text">Configuration</span></button></div>
+            </div>
+            <div class="zmrpage-contentarea">
+                <div class="zmrsubmenu-container">
+                    <div class="zmrsubmenu__search">
+                        <div class="zmform-element">
+                            <div class="zmtext zmtext--filled zmtext--md input-bg">
+                                <div class="zmtext-field-wrapper">
+                                    <div class="zmtext__adorn"><i class="zmci-search"></i></div>
+                                    <input class="zmtext__box" type="text" placeholder="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <button class="zmaccordion__trigger zmrsubmenu__nav zmaccordion--expand-active"><span
+                                    class="zmaccordion__title">General</span><i
+                                    class="zmaccordion__icon zmci-arrow-up"></i></button>
+                            <ul class="zmrsubmenu__item zmaccordion__content zmaccordion--enter zmaccordion--enter-active"
+                                style="max-height: 300px;">
+                                <li><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+                                            class="zmbtn__text">Domains</span></button></li>
+                                <li class="current"><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+                                            class="zmbtn__text">Email Policies</span></button></li>
+                                <li><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"
+                                        onclick="location.href='activity-summary.html'"><span
+                                            class="zmbtn__text">Activity Summary</span></button></li>
+                                <li><button
+                                        class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"
+                                        onclick="location.href='license-ultilisation-table.html'"><span
+                                            class="zmbtn__text">License</span></button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="zmrcontent-container">
+                    <div class="zmrcontent-non-scrollable">
+                        <div class="zmractionbar">
+                            <div class="zmractionbar__left">
+                                <div class="zmractionbar-nav">
+                                    <div class="zmbuttonbar-block">
+                                        <button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default">
+                                            <i class="zmri-export zmbtn__icon"></i><span
+                                                class="zmbtn__text">Export</span>
+                                        </button>
+                                        <i class="zmmenu-separator zmmenu-separator--line"></i>
+                                        <button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default">
+                                            <i class="zmri-filter zmbtn__icon"></i><span
+                                                class="zmbtn__text">Filter</span>
+                                        </button>
+                                        <i class="zmmenu-separator zmmenu-separator--line"></i>
+                                        <div class="zmform-element">
+                                            <div class="zmtext zmtext--filled zmtext--md input-bg">
+                                                <div class="zmtext-field-wrapper">
+                                                    <div class="zmtext__adorn"><i class="zmci-search"></i></div>
+                                                    <input class="zmtext__box" type="text"
+                                                        placeholder="Search Name/Email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zmractionbar__right">
+                                <div class="zmractionbar-nav">
+                                    <span class="zmspinner"></span>
+                                    <span>Showing <b>50</b> of <b>189</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zmrcontent-scrollable zmrcontent-scrollbar">
+                        <table class="zmtable zmtable--simple">
+                            <thead class="zmtable-header zmtable-header--sticky">
+                                <tr>
+                                    <th>Name/Email</th>
+                                    <th>Last login time</th>
+                                    <th class="zmtable-cell--align-center">TFA status</th>
+                                    <th class="zmtable-cell--align-center">User status</th>
+                                    <th>Group membership(s)</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Rejin</div>
+                                                <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td class="zmtable-ellipsis">
+                                        <div class="zmtable-flex-wrapper">
+                                            <div class="zmtable-cell-title">Balakrishnan Balamurugan</div>
+                                            <div class="zmtable-cell-ellipsis">
+                                                <div class="zmtable-cell-desc">balamurugan.s@admintestnew.online</div>
+                                                <span
+                                                    class="zmbadge zmbadge--theme zmbadge--outlined zmbadge--circle">+2</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-desc">New user</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td class="zmtable-ellipsis">
+                                        <div class="zmtable-flex-wrapper">
+                                            <div class="zmtable-cell-ellipsis">
+                                                <div class="zmtable-cell-desc">group79@prabu1.us</div>
+                                                <span
+                                                    class="zmbadge zmbadge--theme zmbadge--outlined zmbadge--circle">+2</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Custom administrator</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">anand2</div>
+                                                <div class="zmtable-cell-desc">anand2@prabutest1.us</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group72@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Cliq</div>
+                                                <div class="zmtable-cell-desc">cliq@prabu1.us</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">2 months ago</div>
+                                        <div class="zmtable-cell-desc">23/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">user custom</div>
+                                                <div class="zmtable-cell-desc">custom.user@prabu1.us</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-desc">New user</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">R David</div>
+                                                <div class="zmtable-cell-desc">david.r@prabu.ac-domain.in</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Group Moderator only</div>
+                                                <div class="zmtable-cell-desc">groupmoderatoronly@prabu1.us</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-desc">New user</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Rejin</div>
+                                                <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-desc">New user</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Rejin</div>
+                                                <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Rejin</div>
+                                                <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Rejin</div>
+                                                <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                                <tr class="zmtable-row">
+                                    <td>
+                                        <div class="zmtable-flex-wrapper">
+                                            <div>
+                                                <div class="zmtable-cell-title">Rejin</div>
+                                                <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="zmtable-cell-title">5 months ago</div>
+                                        <div class="zmtable-cell-desc">06/12/21 11:52</div>
+                                    </td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+                                                class="zmri-close"></i></span></td>
+                                    <td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+                                                class="zmri-tick"></i></span></td>
+                                    <td>group87@prabu1.us</td>
+                                    <td>User</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="zmdrawer zmdrawer--size zmdrawer--position-right" style="width: 55%; z-index: 10;">
+        <div class="zmrcontent-container">
+            <div class="zmrcontent-non-scrollable">
+                <div class="zmrpolicies-header">
+                    <h5>Default Policy</h5>
+                    <div class="zmmenubar">
+                        <div class="zmmenubar-block">
+                            <div class="zmmenubar-group">
+                                <button type="button" class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default"><i
+                                        class="zmri-search zmbtn__icon"></i></button>
+                                <button type="button" class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default"><i
+                                        class="zmci-arrow-up-right zmbtn__icon"></i></button>
+                                <button type="button" class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default"><i
+                                        class="zmci-close zmbtn__icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zmrpolicies-title">
+                    <h6>Associated Users</h6>
+                    <h6>Associated Groups</h6>
+                </div>
+            </div>
+            <div class="zmrcontent-scrollable">
+                <div class="zmrpolicies-container">
+                    <div class="zmrpolicies-box">
+                        <div class="zmrcontent-container">
+                            <div class="zmrcontent-scrollable zmrcontent-scrollbar">
+                                <table class="zmtable zmtable--simple">
+                                    <thead class="zmtable-header zmtable-header--sticky">
+                                        <tr>
+                                            <th>Username/Email address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbo<tr class="zmtable-row">
+                                        <td>
+                                            <div class="zmtable-flex-wrapper">
+                                                <div>
+                                                    <div class="zmtable-cell-title">Rejin</div>
+                                                    <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zmrpolicies-box">
+                        <div class="zmrcontent-container">
+                            <div class="zmrcontent-scrollable zmrcontent-scrollbar">
+                                <table class="zmtable zmtable--simple">
+                                    <thead class="zmtable-header zmtable-header--sticky">
+                                        <tr>
+                                            <th>Group name/Email address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="zmtable-row">
+                                            <td>
+                                                <div class="zmtable-flex-wrapper">
+                                                    <div>
+                                                        <div class="zmtable-cell-title">Rejin</div>
+                                                        <div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('.quickopenbtn').click(function () {
+            $('#quicksearch').toggleClass('show');
+        });
+        $('.quickclosebtn').click(function () {
+            $('.zmdialog-outer-wrapper').removeClass('show');
+        });
+    </script>
+</body>
+
+</html>

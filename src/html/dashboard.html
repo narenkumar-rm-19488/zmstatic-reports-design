@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<title>Admin Reports</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="//zmstatic/mockups/component/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../css/local-fonts.css" rel="stylesheet" type="text/css">
+	<link href="../css/icons.css" rel="stylesheet" type="text/css">
+	<link href="../css/themes.css" rel="stylesheet" type="text/css">
+	<link href="../css/layout.css" rel="stylesheet" type="text/css">
+	<link href="../css/header.css" rel="stylesheet" type="text/css">
+	<link href="../css/appsbar.css" rel="stylesheet" type="text/css">
+	<link href="../css/dashboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="zmf-lato zmAppLight zmThmBlue zmLHSDark">
+	<main class="zmr-main-container">
+		<header class="zmrheader">
+			<div class="zmrheader__brand">
+				<div class="zmrheader__logo">
+					<i class="zmri-mailadmin"></i>
+					<span class="zmrheader__name">Admin Reports</span>
+				</div>
+			</div>
+			<div class="zmrheader__info">
+				<div class="zmrpage-title">
+					<span class="zmrpage-text"><span>Dashboard</span></span>
+				</div>
+				<div class="zmrheader__nav">
+					<ul>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat quickopenbtn"><i
+									class="zmri-search zmbtn__icon"></i></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat pulse-effect"><i
+									class="zmri-clouddown zmbtn__icon"></i></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+									class="zmri-help zmbtn__icon"></i></button></li>
+						<li class="zmrheader__nav-img">
+							<div class="zmavatar zmavatar--md zmavatar--circle">
+								<div class="zmavatar__image-wrapper"><img class="zmavatar__image" alt=""
+										src="../img/user-thumbnail.png"></div>
+								<i class="zmuseravailability available"></i>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="zmrpage-container">
+			<div class="zmrapps">
+				<div class="zmrapps-scrollbar">
+					<ul>
+						<li class="zmrapps__active"><button
+								class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-dashboard"></i><span
+									class="zmbtn__text">Dashboard</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-favourite"></i><span
+									class="zmbtn__text">Favourites</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='users.html'"><i class="zmbtn__icon zmri-user"></i><span
+									class="zmbtn__text">Users</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='addon-storage.html'"><i
+									class="zmbtn__icon zmri-mailunread"></i><span
+									class="zmbtn__text">Mailbox</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='threat-traffic-preview.html'"><i
+									class="zmbtn__icon zmri-statistics"></i><span class="zmbtn__text">Email
+									Statistics</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-groups"></i><span class="zmbtn__text">Groups</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='audit-logs.html'"><i class="zmbtn__icon zmri-logsnew"></i><span
+									class="zmbtn__text">Logs</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-security"></i><span
+									class="zmbtn__text">Compliance</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='dorm-reports-cardview.html'"><i
+									class="zmbtn__icon zmri-collaborative"></i><span class="zmbtn__text">Collaborative
+									Apps</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='activity-summary.html'"><i
+									class="zmbtn__icon zmri-organization"></i><span
+									class="zmbtn__text">Organization</span></button></li>
+						<!--<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>
+							<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-security"></i><span class="zmbtn__text">Security</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav" onclick="location.href='activity-summary.html'"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>-->
+					</ul>
+				</div>
+				<div class="zmrsettings-section"><button
+						class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsetting-btn"
+						onclick="location.href='settings.html'"><i class="zmbtn__icon zmri-controls"></i><span
+							class="zmbtn__text">Configuration</span></button></div>
+			</div>
+			<div class="zmrpage-contentarea">
+				<div class="zmrcontent-container">
+					<div class="zmrcontent-scrollable">
+						<div class="zmrdashboard-wrapper">
+							<div class="zmrdashboard-header">
+								<div class="zmrdashboard-header-nav">
+									<div class="zmrtab-container">
+										<div class="zmtab-moretab-wrapper">
+											<div class="zmtab-wrapper zmtab-horizontal">
+												<button class="zmtab zmtab--underlined selected"><span
+														class="zmtab__text">Graphical View</span></button>
+												<button class="zmtab zmtab--underlined"
+													onclick="location.href='user-dashboard.html'"><span
+														class="zmtab__text">User View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+											</div>
+											<i class="zmmenu-separator zmmenu-separator--line"></i>
+											<button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default">
+												<i class="zmci-angle-down zmbtn__icon"></i>
+											</button>
+										</div>
+									</div>
+									<div class="zmmenubar zmrdashboard-header-menu">
+										<i class="zmmenu-separator zmmenu-separator--line"></i>
+										<button
+											class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--primary zmbtn--flat zmrcustombtn"><i
+												class="zmci-plus-small zmbtn__icon"></i></button>
+									</div>
+								</div>
+								<div class="zmrdashboard-header-action">
+									<div class="zmform-element">
+										<div class="zmtext zmtext--outlined zmselect zmtext--md">
+											<div class="zmtext-field-wrapper">
+												<span class="zmtext__box zmselect__box" data-placeholder="">Last 7 days
+													( May 30 − Jun 5, 2023 )</span>
+												<div class="zmtext__adorn zmselect__arrow"><i
+														class="zmci-arrow-bottom"></i></div>
+											</div>
+										</div>
+									</div>
+									<div class="zmmenubar">
+										<i class="zmmenu-separator zmmenu-separator--line"></i>
+										<button
+											class="zmbtn zmbtn--mbtn zmbtn--xl zmbtn--default zmbtn--flat zmrthemebtn"><i
+												class="zmri-theme zmbtn__icon"></i></button>
+									</div>
+								</div>
+							</div>
+							<div class="zmrcard-list">
+								<div class="zmrcard">
+									<div class="zmrcard__info">
+										<div class="zmrcard__text">12</div>
+										<div class="zmrcard__label">Favourite Reports</div>
+									</div>
+								</div>
+								<div class="zmrcard">
+									<div class="zmrcard__info">
+										<div class="zmrcard__text">24</div>
+										<div class="zmrcard__label">Domains</div>
+									</div>
+								</div>
+								<div class="zmrcard">
+									<div class="zmrcard__info">
+										<div class="zmrcard__text">36</div>
+										<div class="zmrcard__label">Users</div>
+									</div>
+								</div>
+								<div class="zmrcard">
+									<div class="zmrcard__info">
+										<div class="zmrcard__text">42</div>
+										<div class="zmrcard__label">Groups Reports</div>
+									</div>
+								</div>
+								<div class="zmrcard">
+									<div class="zmrcard__info">
+										<div class="zmrcard__text">33</div>
+										<div class="zmrcard__label">Email Polciy</div>
+									</div>
+								</div>
+								<div class="zmrcard">
+									<div class="zmrcard__info">
+										<div class="zmrcard__text">14</div>
+										<div class="zmrcard__label">Partners Count</div>
+									</div>
+								</div>
+							</div>
+							<div class="zmrdashboard-content">
+								<div class="zmrchart-wrapper">
+									<div class="zmrchart-item" id="expandChart">
+										<div class="zmrchart-box">
+											<div class="zmrchart-action">
+												<div class="zmmenubar-group">
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-opentab zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-linechart zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-export zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"
+														id="expandbtn"><i
+															class="zmri-fullscreen zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-eyehideline zmbtn__icon"></i></button>
+												</div>
+											</div>
+											<div class="zmrchart-header">
+												<i class="zmrchart-header-dragicon zmci-grip-dots-vertical"></i>
+												<div class="zmrchart-header-title">Email Traffic</div>
+											</div>
+											<div class="zmrchart-content">
+												<iframe frameborder="0" id="iframe" width="100%" height="350"
+													src="chart-1.html"></iframe>
+											</div>
+											<div class="zmrchart-legend">
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #317FFD;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">75</span>
+														<span class="zmrchart-legend-info-label">Incoming Emails</span>
+													</div>
+												</div>
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #FD6861;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">53</span>
+														<span class="zmrchart-legend-info-label">Outgoing Emails</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrchart-item">
+										<div class="zmrchart-box">
+											<div class="zmrchart-action">
+												<div class="zmmenubar-group">
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-opentab zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-linechart zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-export zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-fullscreen zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-eyehideline zmbtn__icon"></i></button>
+												</div>
+											</div>
+											<!-- <div style="display: flex; align-items: center; position: absolute; right: 150px; top: 50px; background-color: #fff; border: 1px solid #317FFD; box-shadow: 0 0 5px rgba(0, 0, 0, .15);">
+												<span style="font-size: 26px; color: #317FFD; font-weight: 700; padding: 12px; border-right: 1px solid #e4e5e7;">35</span>
+												<div style="flex: 1; padding: 12px;">
+													<span style="font-size: 14px; font-weight: 700; display: block;">Incoming Emails</span>
+													<span style="font-size: 12px;">Jan 14, 2023</span>
+												</div>
+											</div> -->
+											<div class="zmrchart-header">
+												<i class="zmrchart-header-dragicon zmci-grip-dots-vertical"></i>
+												<div class="zmrchart-header-title">Email Size</div>
+											</div>
+											<div class="zmrchart-content">
+												<iframe frameborder="0" width="100%" height="350"
+													src="chart-4.html"></iframe>
+											</div>
+											<div class="zmrchart-legend">
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #317FFD;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">75</span>
+														<span class="zmrchart-legend-info-label">Incoming Emails
+															Size</span>
+													</div>
+												</div>
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #FD6861;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">53</span>
+														<span class="zmrchart-legend-info-label">Outgoing Emails
+															Size</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrchart-item">
+										<div class="zmrchart-box">
+											<div class="zmrchart-action">
+												<div class="zmmenubar-group">
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-opentab zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-linechart zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-export zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-fullscreen zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-eyehideline zmbtn__icon"></i></button>
+												</div>
+											</div>
+											<div class="zmrchart-header">
+												<i class="zmrchart-header-dragicon zmci-grip-dots-vertical"></i>
+												<div class="zmrchart-header-title">Mail Storage</div>
+											</div>
+											<div class="zmrchart-content">
+												<iframe frameborder="0" width="100%" height="350"
+													src="chart-3.html"></iframe>
+											</div>
+										</div>
+									</div>
+									<div class="zmrchart-item">
+										<div class="zmrchart-box">
+											<div class="zmrchart-action">
+												<div class="zmmenubar-group">
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-opentab zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-linechart zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-export zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-fullscreen zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-eyehideline zmbtn__icon"></i></button>
+												</div>
+											</div>
+											<div class="zmrchart-header">
+												<i class="zmrchart-header-dragicon zmci-grip-dots-vertical"></i>
+												<div class="zmrchart-header-title">User Summary <span
+														class="zmrchart-header-sort">Sorting Date is Not
+														Applicable</span></div>
+											</div>
+											<div class="zmrchart-content">
+												<iframe frameborder="0" width="100%" height="350"
+													src="chart-2.html"></iframe>
+											</div>
+											<div class="zmrchart-legend">
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #317FFD;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">65%</span>
+														<span class="zmrchart-legend-info-label">Active Users</span>
+													</div>
+												</div>
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #FD6861;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">35%</span>
+														<span class="zmrchart-legend-info-label">Inactive Users</span>
+													</div>
+												</div>
+												<div class="zmrchart-legend-item">
+													<div class="zmrchart-legend-icon"
+														style="background-color: #FBA23E;"></div>
+													<div class="zmrchart-legend-info">
+														<span class="zmrchart-legend-info-text">5%</span>
+														<span class="zmrchart-legend-info-label">Admin Users</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrchart-item">
+										<div class="zmrchart-box">
+											<div class="zmrchart-action">
+												<div class="zmmenubar-group">
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-opentab zmbtn__icon"></i> <span
+															class="zmbtn__text">View All</span></button>
+												</div>
+											</div>
+											<div class="zmrchart-header">
+												<i class="zmrchart-header-dragicon zmci-grip-dots-vertical"></i>
+												<div class="zmrchart-header-title">User Summary</div>
+											</div>
+											<div class="zmrchart-contentarea">
+												<div class="zmrdashboard-table-wrapper">
+													<table class="zmtable zmtable--simple zmrdashboard-table">
+														<thead class="zmtable-header zmtable-header--sticky">
+															<tr class="zmtable-row">
+																<th>Email Address</th>
+																<th>Inbound Mails</th>
+																<th>Outbound Mails</th>
+																<th>First seen date</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="zmtable-row">
+																<td>lokesh@bizdemo.net</td>
+																<td>5</td>
+																<td>2</td>
+																<td>Tue, 16 Jul 2019 13:13:40</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrchart-item">
+										<div class="zmrchart-box">
+											<div class="zmrchart-action">
+												<div class="zmmenubar-group">
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-opentab zmbtn__icon"></i></button>
+													<button
+														class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+															class="zmri-eyehideline zmbtn__icon"></i></button>
+												</div>
+											</div>
+											<div class="zmrchart-header">
+												<i class="zmrchart-header-dragicon zmci-grip-dots-vertical"></i>
+												<div class="zmrchart-header-title">Recently created users</div>
+											</div>
+											<div class="zmrchart-contentarea">
+												<ul class="zmrdashboard-list">
+													<li class="zmrdashboard-list__item">
+														<div class="zmrdashboard-list__info">
+															<span class="zmrdashboard-list__label">Last 7 days</span>
+															<span class="zmrdashboard-list__value">8</span>
+														</div>
+														<div class="zmrdashboard-list__arrow"><i
+																class="zmci-angle-right"></i></div>
+													</li>
+													<li class="zmrdashboard-list__item">
+														<div class="zmrdashboard-list__info">
+															<span class="zmrdashboard-list__label">This week</span>
+															<span class="zmrdashboard-list__value">8</span>
+														</div>
+														<div class="zmrdashboard-list__arrow"><i
+																class="zmci-angle-right"></i></div>
+													</li>
+													<li class="zmrdashboard-list__item">
+														<div class="zmrdashboard-list__info">
+															<span class="zmrdashboard-list__label">This month</span>
+															<span class="zmrdashboard-list__value">12</span>
+														</div>
+														<div class="zmrdashboard-list__arrow"><i
+																class="zmci-angle-right"></i></div>
+													</li>
+													<li class="zmrdashboard-list__item">
+														<div class="zmrdashboard-list__info">
+															<span class="zmrdashboard-list__label">This year</span>
+															<span class="zmrdashboard-list__value">50+</span>
+														</div>
+														<div class="zmrdashboard-list__arrow"><i
+																class="zmci-angle-right"></i></div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="zmdialog-outer-wrapper zmdialog-fadein" id="zmrcustom-dialog" style="display: none;">
+		<div class="zmdialog-backdrop"></div>
+		<div class="zmdialog-inner-wrapper zmdialog--scroll-content">
+			<section class="zmdialog zmdialog--md">
+				<button class="zmdialog__close zmdialog__close--outside zmrcustomclosebtn"><i
+						class="zmci-close"></i></button>
+				<header class="zmdialog__header zmrcustom-header">
+					<h2 class="zmdialog__title">Create Custom Dashboard</h2>
+				</header>
+				<div class="zmdialog__content">
+					<div class="zmrcustom-dialog">
+						<div class="zmrcustom__filed">
+							<div class="zmrcustom__col">
+								<div class="zmtext zmtext--outlined zmtext--md">
+									<div class="zmtext-field-wrapper">
+										<input class="zmtext__box" type="text" placeholder="Enter Tab Name">
+									</div>
+								</div>
+							</div>
+							<div class="zmrcustom__col">
+								<div class="zmform-element">
+									<div class="zmtext zmtext--outlined zmselect zmtext--md">
+										<div class="zmtext-field-wrapper">
+											<div class="zmtext__adorn"><span
+													class="zmrtheme-color zmrtheme-color--option1"></span></div>
+											<span class="zmtext__box zmselect__box zmrtheme-selected"
+												data-placeholder="">Blue & Red</span>
+											<div class="zmtext__adorn zmselect__arrow"><i class="zmci-arrow-bottom"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="zmrcustom__col">
+								<div class="zmrcustom__toggle">
+									<span class="zmrcustom__toggle__label">Enable Cards View</span>
+									<span class="zmswitch zmswitch--filled zmswitch--sm"><input type="checkbox"
+											checked=""><span class="zmswitch__track"><span
+												class="zmswitch__thumb"></span></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="zmrcustom__title">Add Reports Widgets</div>
+						<div class="zmrcustom__filed">
+							<div class="zmrcustom__col">
+								<div class="zmrcustom__widget">
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<div class="zmtext__adorn"><i class="zmri-faq"></i></div>
+													<span class="zmtext__box zmselect__box" data-placeholder="">Summary
+														View</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<span class="zmtext__box zmselect__box" data-placeholder="">Group
+														With Most Members</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<i class="zmci-drag zmrdrag-icon"></i>
+							</div>
+							<div class="zmrcustom__col">
+								<div class="zmrcustom__widget">
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<div class="zmtext__adorn"><i class="zmri-faq"></i></div>
+													<span class="zmtext__box zmselect__box" data-placeholder="">Summary
+														View</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<span class="zmtext__box zmselect__box" data-placeholder="">Group
+														With Most Members</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<i class="zmci-drag zmrdrag-icon"></i>
+							</div>
+							<div class="zmrcustom__col zmrcustom__add">
+								<button
+									class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--outlined zmbtn--primary zmbtn--disabled zmrcustom__action"><i
+										class="zmci-plus zmbtn__icon"></i><span class="zmbtn__text">Add Another
+										Widget</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="zmdialog__footer zmrcustom__footer">
+					<div class="zmbuttonbar">
+						<div class="zmbuttonbar-block zmbuttonbar-block--left-align">
+							<button class="zmbtn zmbtn--btn zmbtn--md zmbtn--red zmbtn--outlined"><span
+									class="zmbtn__text">Delete This View</span></button>
+						</div>
+						<div class="zmbuttonbar-block zmbuttonbar-block--right-align">
+							<button
+								class="zmbtn zmbtn--btn zmbtn--md zmbtn--outlined zmbtn--default zmrcustomclosebtn"><span
+									class="zmbtn__text">Close</span></button>
+							<button class="zmbtn zmbtn--btn zmbtn--md zmbtn--filled zmbtn--primary"><span
+									class="zmbtn__text">Create</span></button>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+	</div>
+
+	<div class="zmdd-outer-wrapper" id="zmrtheme-dialog" style="position: absolute; right: 24px; top: 100px;">
+		<div class="zmdd zmdd--main">
+			<div class="zmdd__content-wrapper">
+				<div class="zmdd__content">
+					<ul class="zmlist">
+						<li class="zmlist-item zmlist-menu-item has-hover zmlist-menu-item--primary ticked"
+							tabindex="0">
+							<i class="zmlist-item__icon zmrtheme-color zmrtheme-color--option1"></i>
+							<span class="zmlist-item__text">Blue & Red</span>
+							<i class="zmci-tick zmlist-item__tick"></i>
+						</li>
+						<li class="zmlist-separator zmlist-separator--full-width"></li>
+						<li class="zmlist-item zmlist-menu-item has-hover" tabindex="0">
+							<i class="zmlist-item__icon zmrtheme-color zmrtheme-color--option2"></i>
+							<span class="zmlist-item__text">Green & Orange</span>
+							<i class="zmci-tick zmlist-item__tick"></i>
+						</li>
+						<li class="zmlist-separator zmlist-separator--full-width"></li>
+						<li class="zmlist-item zmlist-menu-item has-hover" tabindex="0">
+							<i class="zmlist-item__icon zmrtheme-color zmrtheme-color--option3"></i>
+							<span class="zmlist-item__text">Violet & Green</span>
+							<i class="zmci-tick zmlist-item__tick"></i>
+						</li>
+						<li class="zmlist-separator zmlist-separator--full-width"></li>
+						<li class="zmlist-item zmlist-menu-item has-hover" tabindex="0">
+							<i class="zmlist-item__icon zmrtheme-color zmrtheme-color--option4"></i>
+							<span class="zmlist-item__text">Pink & Baby Blue</span>
+							<i class="zmci-tick zmlist-item__tick"></i>
+						</li>
+						<li class="zmlist-separator zmlist-separator--full-width"></li>
+						<li class="zmlist-item zmlist-menu-item has-hover" tabindex="0">
+							<i class="zmlist-item__icon zmrtheme-color zmrtheme-color--option5"></i>
+							<span class="zmlist-item__text">Green & Yellow</span>
+							<i class="zmci-tick zmlist-item__tick"></i>
+						</li>
+						<li class="zmlist-separator zmlist-separator--full-width"></li>
+						<li class="zmlist-item zmlist-menu-item has-hover" tabindex="0">
+							<i class="zmlist-item__icon zmrtheme-color zmrtheme-color--option6"></i>
+							<span class="zmlist-item__text">Black & White</span>
+							<i class="zmci-tick zmlist-item__tick"></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$('.zmrcustombtn').click(function () {
+			$('#zmrcustom-dialog').toggleClass('show');
+		});
+		$('.zmrcustomclosebtn').click(function () {
+			$('.zmdialog-outer-wrapper').removeClass('show');
+		});
+
+		$('.zmrthemebtn').click(function () {
+			$('#zmrtheme-dialog').toggleClass('show');
+		});
+
+		$('#expandbtn').click(function () {
+			$('#expandChart').toggleClass('expandActive');
+			$('#expandbtn i').toggleClass("zmri-fullscreen").toggleClass('zmri-exitfullscreen');
+			$('#iframe').attr('src', function () { return $(this)[0].src; });
+		});
+
+		window.onload = function () {
+			$(".zmtext__box").focus(function () {
+				$(this).parents(".zmtext").addClass("zmtext--focused");
+				if ($(this).parents(".zmtext").hasClass("zmtext-label-animation")) {
+					$(this).parents(".zmtext").addClass("zmtext-label-animated");
+				}
+			});
+			$(".zmtext__box").blur(function () {
+				$(this).parents(".zmtext").removeClass("zmtext--focused");
+				if ($(this).parents(".zmtext").hasClass("zmtext-label-animated") && $(this).val() == '') {
+					$(this).parents(".zmtext").removeClass("zmtext-label-animated");
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>

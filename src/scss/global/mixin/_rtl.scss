@@ -1,0 +1,8 @@
+@mixin rtl($property1, $ltr-value, $property2, $rtl-value) {
+	html[dir='ltr'] &{
+		#{$property1}: $ltr-value;
+	}
+	html[dir='rtl'] & {
+		#{$property2}: $rtl-value;
+	}
+}

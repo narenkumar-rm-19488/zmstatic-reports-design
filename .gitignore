@@ -1,0 +1,10 @@
+.vscode
+./node_modules/*
+node_modules
+**/.DS_Store
+build/node_modules
+**/package-lock.json
+**/css
+**/js/hbs_output.js
+*.css
+*.css.map

@@ -1,0 +1,137 @@
+@import 'global/variables';
+@import 'global/mixins';
+
+$quicksearchname: '.zmrqsearch';
+
+#{$quicksearchname}{
+	&-wrap{
+		
+		min-width: 736px;
+		min-height: 380px;
+		max-height: 380px;
+		height: 100%;
+	}
+	&-header{
+		@include flex(row);
+		align-items: center;
+		border-bottom: 1px solid $appSeparatorColor;
+		padding-bottom: $space16;
+		.zmdialog__title{
+			flex: 1;
+			align-self: center;
+		}
+		.zmrqsearch__box{
+			--zmtext-box-width: 245px;
+		}
+	}
+	&-container{
+		@include flex(flex wrap);
+		h6{
+			margin: 0 0 $space8;
+			flex-basis: 100%;
+			max-width: 100%;
+			text-transform: uppercase;
+			font-size: $fontSize14;
+		}
+	}
+	&__box{
+		flex-basis: 33.333%;
+		max-width: 33.333%;
+		padding: 0 $space4;
+		box-sizing: border-box;
+		#{$quicksearchname}{
+			&__title{
+				font-weight: $fontBold;
+				font-size: $fontSize14;
+				padding-bottom: $space8;
+			}
+			&__listing{
+				max-height: rem(195px);
+				flex: 1 1 0;
+				overflow-y: auto;
+				margin-bottom: $space12;
+				&::-webkit-scrollbar{
+					width: 0;
+					height: 0;
+				}
+				&:hover::-webkit-scrollbar{
+					width: rem(6px);
+					height: rem(6px);
+				}
+				.zmbtn{
+					color: $appTextColor;
+					width: 100%;
+    				text-align: left;
+				}
+			}
+		}
+	}
+	&--empty{
+		padding: 0 $space8;
+		text-align: center;
+		align-self: center;
+		span{
+			font-size: $fontSize12;
+			color: $appTextColorLight;
+			line-height: 1.5;
+		}
+	}
+	&__listing{
+		flex: 1 1 0;
+		overflow-y: auto;
+		li{
+			margin-bottom: rem(2px);
+		}
+	}
+	&-separator{
+		background: $appSeparatorColor;
+    	width: 1px;
+	}
+	&-nav-action{
+		background-color: transparent;
+		border: 1px solid transparent;
+		border-radius: $radius4;
+		font-family: inherit;
+		padding: $space8 $space12;
+		@include webkit(transition, background-color .3s ease);
+		&:hover{
+			background-color: $appThemeColor500;
+			color: $appWhiteColor;
+			.zmaccordion{
+				&__icon{
+					color: $appWhiteColor;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		&.active{
+			background-color: $appThemeColor100;
+			color: $appTextColor;
+			.zmaccordion{
+				&__icon{
+					color: $appTextColorLight;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		.zmaccordion{
+			&__title{
+				display: inline-block;
+				overflow-x: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				@include webkit(transition, color .3s ease);
+			}
+			&__icon{
+				@include webkit(transform, rotate(-180deg));
+				opacity: 0;
+				visibility: hidden;
+				font-size: $fontSize12;
+				@include webkit(transition, opacity .3s ease);
+			}
+			
+		}
+	}
+}

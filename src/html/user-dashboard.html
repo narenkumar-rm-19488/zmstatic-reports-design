@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<title>Admin Reports</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="//zmstatic/mockups/component/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../css/local-fonts.css" rel="stylesheet" type="text/css">
+	<link href="//zmstatic/mockups/component/css/timeline.css" rel="stylesheet" type="text/css">
+	<link href="../css/icons.css" rel="stylesheet" type="text/css">
+	<link href="../css/themes.css" rel="stylesheet" type="text/css">
+	<link href="../css/layout.css" rel="stylesheet" type="text/css">
+	<link href="../css/header.css" rel="stylesheet" type="text/css">
+	<link href="../css/appsbar.css" rel="stylesheet" type="text/css">
+	<link href="../css/reportstable.css" rel="stylesheet" type="text/css">
+	<link href="../css/dashboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="zmf-lato zmAppLight zmThmBlue zmLHSDark">
+	<main class="zmr-main-container">
+		<header class="zmrheader">
+			<div class="zmrheader__brand">
+				<div class="zmrheader__logo">
+					<i class="zmri-mailadmin"></i>
+					<span class="zmrheader__name">Admin Reports</span>
+				</div>
+			</div>
+			<div class="zmrheader__info">
+				<div class="zmrpage-title">
+					<span class="zmrpage-text"><span>Dashboard</span></span>
+				</div>
+				<div class="zmrheader__nav">
+					<ul>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat quickopenbtn"><i
+									class="zmri-search zmbtn__icon"></i></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat pulse-effect"><i
+									class="zmri-clouddown zmbtn__icon"></i></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+									class="zmri-help zmbtn__icon"></i></button></li>
+						<li class="zmrheader__nav-img">
+							<div class="zmavatar zmavatar--md zmavatar--circle">
+								<div class="zmavatar__image-wrapper"><img class="zmavatar__image" alt=""
+										src="../img/user-thumbnail.png"></div>
+								<i class="zmuseravailability available"></i>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="zmrpage-container">
+			<div class="zmrapps">
+				<div class="zmrapps-scrollbar">
+					<ul>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-dashboard"></i><span
+									class="zmbtn__text">Dashboard</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-favourite"></i><span
+									class="zmbtn__text">Favourites</span></button></li>
+						<li class="zmrapps__active"><button
+								class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-user"></i><span class="zmbtn__text">Users</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='addon-storage.html'"><i
+									class="zmbtn__icon zmri-mailunread"></i><span
+									class="zmbtn__text">Mailbox</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-statistics"></i><span class="zmbtn__text">Email
+									Statistics</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-groups"></i><span class="zmbtn__text">Groups</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-logsnew"></i><span class="zmbtn__text">Logs</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-security"></i><span
+									class="zmbtn__text">Compliance</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-collaborative"></i><span class="zmbtn__text">Collaborative
+									Apps</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-organization"></i><span
+									class="zmbtn__text">Organization</span></button></li>
+						<!--<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>
+							<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-security"></i><span class="zmbtn__text">Security</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>-->
+					</ul>
+				</div>
+				<div class="zmrsettings-section"><button
+						class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsetting-btn"><i
+							class="zmbtn__icon zmri-controls"></i><span
+							class="zmbtn__text">Configuration</span></button></div>
+			</div>
+			<div class="zmrpage-contentarea">
+				<div class="zmrcontent-container">
+					<div class="zmrcontent-scrollable">
+						<div class="zmrdashboard-wrapper">
+							<div class="zmrdashboard-header">
+								<div class="zmrdashboard-header-nav">
+									<div class="zmrdashboard-tabcontainer">
+										<div class="zmtab-moretab-wrapper">
+											<div class="zmtab-wrapper zmtab-horizontal">
+												<button class="zmtab zmtab--underlined"
+													onclick="location.href='dashboard.html'"><span
+														class="zmtab__text">Graphical View</span></button>
+												<button class="zmtab zmtab--underlined selected"><span
+														class="zmtab__text">User View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+												<button class="zmtab zmtab--underlined"><span
+														class="zmtab__text">Summary View</span></button>
+											</div>
+											<i class="zmmenu-separator zmmenu-separator--line"></i>
+											<button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+													class="zmci-angle-down zmbtn__icon"></i></button>
+										</div>
+									</div>
+									<div class="zmmenubar zmrdashboard-header-menu">
+										<i class="zmmenu-separator zmmenu-separator--line"></i>
+										<button class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--primary zmbtn--flat"><i
+												class="zmci-plus-small zmbtn__icon"></i></button>
+									</div>
+								</div>
+								<div class="zmrdashboard-header-action">
+									<div class="zmform-element">
+										<div class="zmtext zmtext--outlined zmselect zmtext--md">
+											<div class="zmtext-field-wrapper">
+												<span class="zmtext__box zmselect__box" data-placeholder="">Last 7 days
+													( May 30 − Jun 5, 2023 )</span>
+												<div class="zmtext__adorn zmselect__arrow"><i
+														class="zmci-angle-down"></i></div>
+											</div>
+										</div>
+									</div>
+									<div class="zmmenubar">
+										<i class="zmmenu-separator zmmenu-separator--line"></i>
+										<button
+											class="zmbtn zmbtn--mbtn zmbtn--xl zmbtn--default zmbtn--flat zmrthemebtn"><i
+												class="zmri-theme zmbtn__icon"></i></button>
+									</div>
+								</div>
+							</div>
+							<div class="zmruserdashboard-section">
+								<div class="zmruserdashboard-wrapper">
+									<div class="zmruserdashboard__userpanel">
+										<div class="zmrLhs-toggle"><i class="zmci-file-video"></i></div>
+										<div class="zmruserdashboard__search">
+											<div class="zmruserdashboard__search__box">
+												<div class="zmform-element">
+													<div class="zmtext zmtext--outlined zmtext--md">
+														<div class="zmtext-field-wrapper">
+															<div class="zmtext__adorn"><i
+																	class="zmci-magnifying-glass"></i></div>
+															<input class="zmtext__box" type="text"
+																placeholder="Search User">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="zmruserdashboard__userlist">
+											<ul class="zmlist">
+												<li class="zmlist-item zmlist-contact-item has-hover selected">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/user-thumbnail.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Anandhan
+																Thirupathi</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/arun.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Arun Kumar
+																Palani</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/camera-man.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Charlesh
+																K</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/partha.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Parthasarathi
+																Gopalakrishnan</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/pranjal.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Pranjal
+																Lura</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/priya.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Priya
+																N</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/raja.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Gowthaman
+																V</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/ramya.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Ramya
+																A</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/rejin.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Rejin
+																John</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/suren.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Surendran
+																Selvaraj</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/thangam.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Thangam
+																Naren</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/demo-img.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Warne
+																Kane</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/demo-img.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Warne
+																Kane</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/demo-img.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Warne
+																Kane</span></div>
+													</div>
+												</li>
+												<li class="zmlist-item zmlist-contact-item has-hover">
+													<div class="zmlist-item__avatar">
+														<div tabindex="0"
+															class="zmavatar zmavatar--md zmavatar--rounded">
+															<div class="zmavatar__image-wrapper">
+																<img class="zmavatar__image" alt=""
+																	src="../img/demo-img.png">
+															</div>
+														</div>
+													</div>
+													<div class="zmlist-item__cnitem-data">
+														<div class="zmlist-item__cnitem-data__row"><span
+																class="zmlist-item__cnitem-data__user-name">Warne
+																Kane</span></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="zmruserdashboard__content">
+										<!--<div class="zmrloading">
+											<div class = "zmrloading-bar bar1"></div>
+											<div class = "zmrloading-bar bar2"></div>
+											<div class = "zmrloading-bar bar3"></div>
+											<div class = "zmrloading-bar bar4"></div>
+										</div>
+										 <div class="zmloader-line">
+											<div class="zmloader-line__line"></div>
+											<div class="zmloader-line__line-break zmloader-line__line-break--delay1"></div>
+											<div class="zmloader-line__line-break zmloader-line__line-break--delay2"></div>
+											<div class="zmloader-line__line-break zmloader-line__line-break--delay3"></div>
+										</div> -->
+										<div class="zmruserdashboard__panel-wrapper">
+											<div class="zmruserdashboard__panel">
+												<div class="zmruserdashboard__panel-content">
+													<div class="zmruserdashboard__user">
+														<div class="zmruserdashboard__user-box">
+															<div class="zmruserdashboard__user-image">
+																<div tabindex="0"
+																	class="zmavatar zmavatar--xxxl zmavatar--rounded">
+																	<div class="zmavatar__image-wrapper">
+																		<img class="zmavatar__image" alt=""
+																			src="../img/user-thumbnail.png">
+																	</div>
+																</div>
+																<span
+																	class="zmruserdashboard__user-status zmruserdashboard__user-status--enabled"><i
+																		class="zmci-circle-check-filled"></i>Active
+																	User</span>
+															</div>
+														</div>
+														<div class="zmruserdashboard__user-info">
+															<h2><span>Anandhan Thirupathi</span><button
+																	class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--default zmbtn--flat zmruserdashboard__user__popout"><i
+																		class="zmci-arrow-up-right-from-square"></i></button>
+															</h2>
+															<span
+																class="zmruserdashboard__user__email"><span>anandhan.t@zohocorp.com</span>
+																<button
+																	class="zmbtn zmbtn--size zmbtn--default zmbtn--flat zmruserdashboard__user__email__copy"><i
+																		class="zmci-square-dashed-square"></i></button></span>
+															<span>Anand <span>(Nickname)</span></span>
+															<span>Male</span>
+															<span class="zmruserdashboard__user__enabled">TFA
+																Enabled</span>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Account
+																Information</span> <i
+																class="zmci-circle-question zmruserdashboard__title__help"></i>
+														</h3>
+														<div class="zmruserdashboard__listing">
+															<ul>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Creation
+																		Time</span>
+																	<span
+																		class="zmruserdashboard__listing__value">20/12/2022
+																		12:22:30 PM</span>
+																</li>
+																<li>
+																	<span class="zmruserdashboard__listing__label">Last
+																		Password Reset </span>
+																	<span
+																		class="zmruserdashboard__listing__value">12/12/2023
+																		11:02:10 PM</span>
+																</li>
+																<li>
+																	<span class="zmruserdashboard__listing__label">Last
+																		Login Time</span>
+																	<span
+																		class="zmruserdashboard__listing__value">16/12/2023
+																		10:02:10 AM</span>
+																</li>
+																<li>
+																	<span class="zmruserdashboard__listing__label">Time
+																		Zone</span>
+																	<span class="zmruserdashboard__listing__value">(GMT
+																		+5.30) IST</span>
+																</li>
+																<li>
+																	<span class="zmruserdashboard__listing__label">User
+																		ID</span>
+																	<span
+																		class="zmruserdashboard__listing__value">449024</span>
+																</li>
+																<li>
+																	<span class="zmruserdashboard__listing__label">Roles
+																		assigned</span>
+																	<span class="zmruserdashboard__listing__value">User
+																		Management Admin</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Contact
+																Information</span></h3>
+														<div class="zmruserdashboard__listing">
+															<ul>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Address</span>
+																	<span class="zmruserdashboard__listing__value">4/509
+																		D1, SS Apartment, Guduvanchery, Chennai, Tamil
+																		Nadu -602020</span>
+																</li>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Mobile</span>
+																	<span class="zmruserdashboard__listing__value">+91
+																		9012344322</span>
+																</li>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Phone</span>
+																	<span class="zmruserdashboard__listing__value">+044
+																		441234122</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Custom
+																Information</span></h3>
+														<div class="zmruserdashboard__listing">
+															<ul>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Spouse
+																		Name</span>
+																	<span
+																		class="zmruserdashboard__listing__value">Sabestine
+																		D</span>
+																</li>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Emergency
+																		Mobile</span>
+																	<span class="zmruserdashboard__listing__value">+91
+																		9022344233</span>
+																</li>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Email</span>
+																	<span
+																		class="zmruserdashboard__listing__value">sabestine.d@gmail.com</span>
+																</li>
+																<li>
+																	<span class="zmruserdashboard__listing__label">Cliq
+																		Referrer</span>
+																	<span
+																		class="zmruserdashboard__listing__value">mailadmin.localzoho.com</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Group Details</span>
+														</h3>
+														<div class="zmruserdashboard__table">
+															<table class="zmtable zmtable--simple">
+																<thead class="zmtable-header">
+																	<tr class="zmtable-row tableHead">
+																		<th class="zmtable-cell--align-left">Name</th>
+																		<th class="zmtable-cell--align-left">Email</th>
+																		<th class="zmtable-cell--align-left">Role</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="zmtable-row">
+																		<td>Zoho Mail</td>
+																		<td>zohomail@zoho.com</td>
+																		<td>Member</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>Admin Team</td>
+																		<td>adminteram@zoho.com</td>
+																		<td>Admin</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>Design Garage</td>
+																		<td>design.dg@zoho.com</td>
+																		<td>Member</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>Developers</td>
+																		<td>developers@zoho.com</td>
+																		<td>Member</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Service
+																Information</span></h3>
+														<div class="zmruserdashboard__listing">
+															<ul>
+																<li>
+																	<span class="zmruserdashboard__listing__label">Mail
+																		Service</span>
+																	<span class="zmruserdashboard__listing__value"><span
+																			class="zmruserdashboard__status-enabled">Enabled</span></span>
+																</li>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Contacts</span>
+																	<span class="zmruserdashboard__listing__value"><span
+																			class="zmruserdashboard__status-enabled">Enabled</span></span>
+																</li>
+																<li>
+																	<span
+																		class="zmruserdashboard__listing__label">Calendar</span>
+																	<span class="zmruserdashboard__listing__value"><span
+																			class="zmruserdashboard__status-disabled">Disabled</span></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="zmruserdashboard__panel">
+												<div class="zmruserdashboard__panel-content">
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Storage Plan</span>
+														</h3>
+														<div class="zmruserdashboard__plan-list">
+															<span class="zmruserdashboard__plan-value">Workplace
+																Professional</span>
+														</div>
+														<div class="zmruserdashboard__storage-wrapper">
+															<div class="zmruserdashboard__storage-item">
+																<div class="zmruserdashboard__storage">
+																	<div class="zmruserdashboard__storage-img">
+																		<svg viewBox="0 0 36 36"
+																			class="zmruserdashboard__storage-graph">
+																			<path
+																				class="zmruserdashboard__storage-track"
+																				stroke-width="1.5"
+																				d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+																			<path
+																				class="zmruserdashboard__storage-indicator"
+																				stroke-width="3" stroke-linecap="round"
+																				stroke-dasharray="45, 100"
+																				d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+																		</svg>
+																		<div class="zmruserdashboard__storage-size">
+																			<div class="zmruserdashboard__storage-used">
+																				<span>45</span> GB
+																			</div>
+																			<div
+																				class="zmruserdashboard__storage-total">
+																				/ 55 GB</div>
+																		</div>
+																	</div>
+																	<div class="zmruserdashboard__storage-info">
+																		<div class="zmruserdashboard__storage__icon">
+																			<i class="zmci-zoho-mail"></i>
+																		</div>
+																		<div class="zmruserdashboard__storage-list">
+																			<span
+																				class="zmruserdashboard__storage-label">Basic</span>
+																			<span
+																				class="zmruserdashboard__storage-value">50
+																				GB</span>
+																		</div>
+																		<div class="zmruserdashboard__storage__plus">+
+																		</div>
+																		<div class="zmruserdashboard__storage-list">
+																			<span
+																				class="zmruserdashboard__storage-label">Add
+																				on</span>
+																			<span
+																				class="zmruserdashboard__storage-value">5
+																				GB</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="zmruserdashboard__storage-item">
+																<div class="zmruserdashboard__storage">
+																	<div class="zmruserdashboard__storage-img">
+																		<svg viewBox="0 0 36 36"
+																			class="zmruserdashboard__storage-graph">
+																			<path
+																				class="zmruserdashboard__storage-track"
+																				stroke-width="1.5"
+																				d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+																			<path
+																				class="zmruserdashboard__storage-indicator"
+																				stroke-width="3" stroke-linecap="round"
+																				stroke-dasharray="20, 100"
+																				d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+																		</svg>
+																		<div class="zmruserdashboard__storage-size">
+																			<div class="zmruserdashboard__storage-used">
+																				<span>20</span> GB
+																			</div>
+																			<div
+																				class="zmruserdashboard__storage-total">
+																				/ 60 GB</div>
+																		</div>
+																	</div>
+																	<div class="zmruserdashboard__storage-info">
+																		<div class="zmruserdashboard__storage__icon">
+																			<i class="zmci-zoho-eprotect"></i>
+																		</div>
+																		<div class="zmruserdashboard__storage-list">
+																			<span
+																				class="zmruserdashboard__storage-label">Basic</span>
+																			<span
+																				class="zmruserdashboard__storage-value">50
+																				GB</span>
+																		</div>
+																		<div class="zmruserdashboard__storage__plus">+
+																		</div>
+																		<div class="zmruserdashboard__storage-list">
+																			<span
+																				class="zmruserdashboard__storage-label">Add
+																				on</span>
+																			<span
+																				class="zmruserdashboard__storage-value">10
+																				GB</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Email
+																Statistics</span></h3>
+														<div class="zmruserdashboard__statistics">
+															<div class="zmruserdashboard__statistics-item">
+																<span
+																	class="zmruserdashboard__statistics-value green"><a
+																		href="#" name="Incoming Emails">76</a></span>
+																<span
+																	class="zmruserdashboard__statistics-label">Incoming
+																	Emails</span>
+															</div>
+															<div class="zmruserdashboard__statistics-item">
+																<span
+																	class="zmruserdashboard__statistics-value green"><a
+																		href="#" name="Incoming Size">48</a></span>
+																<span
+																	class="zmruserdashboard__statistics-label">Incoming
+																	Size</span>
+															</div>
+															<div class="zmruserdashboard__statistics-item">
+																<span
+																	class="zmruserdashboard__statistics-value orange"><a
+																		href="#" name="Spam Received">24</a></span>
+																<span class="zmruserdashboard__statistics-label">Spam
+																	Received</span>
+															</div>
+															<div class="zmruserdashboard__statistics-item">
+																<span class="zmruserdashboard__statistics-value blue"><a
+																		href="#" name="Outgoing Emails">42</a></span>
+																<span
+																	class="zmruserdashboard__statistics-label">Outgoing
+																	Emails</span>
+															</div>
+															<div class="zmruserdashboard__statistics-item">
+																<span class="zmruserdashboard__statistics-value blue"><a
+																		href="#" name="Outgoing Size">16</a></span>
+																<span
+																	class="zmruserdashboard__statistics-label">Outgoing
+																	Size</span>
+															</div>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<h3 class="zmruserdashboard__title"><span>Audit Logs</span></h3>
+														<div class="zmruserdashboard__audilog">
+															<ul class="zmtimeline zmtimeline--position-right">
+																<li class="zmtimeline__item">
+																	<div
+																		class="zmtimeline__item__label zmruserdashboard__audilog__label">
+																		5 mins ago</div>
+																	<div class="zmtimeline__item__seperator">
+																		<span
+																			class="zmtimeline__item__connector"></span>
+																		<span class="zmtimeline__item__dot"><span
+																				class="zmbadge zmbadge--grey zmbadge-dot zmbadge--outlined"></span></span>
+																	</div>
+																	<div class="zmtimeline__item__content">
+																		<div class="zmruserdashboard__audilog__content">
+																			The Storage details was
+																			<strong>Exported</strong> by <strong>Jhon
+																				Dolera</strong>
+																			<button
+																				class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--default zmbtn--flat zmruserdashboard__audilog__popout"><i
+																					class="zmci-arrow-up-right-from-square"></i></button>
+																		</div>
+																	</div>
+																</li>
+																<li class="zmtimeline__item">
+																	<div
+																		class="zmtimeline__item__label zmruserdashboard__audilog__label">
+																		9 mins ago</div>
+																	<div class="zmtimeline__item__seperator">
+																		<span
+																			class="zmtimeline__item__connector"></span>
+																		<span class="zmtimeline__item__dot"><span
+																				class="zmbadge zmbadge--grey zmbadge-dot zmbadge--outlined"></span></span>
+																	</div>
+																	<div class="zmtimeline__item__content">
+																		<div class="zmruserdashboard__audilog__content">
+																			Password of
+																			<strong>dinesh@zohocorp.com</strong> was
+																			updated by <strong>Danny Rihard</strong>
+																			<button
+																				class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--default zmbtn--flat zmruserdashboard__audilog__popout"><i
+																					class="zmci-arrow-up-right-from-square"></i></button>
+																		</div>
+																	</div>
+																</li>
+																<li class="zmtimeline__item">
+																	<div
+																		class="zmtimeline__item__label zmruserdashboard__audilog__label">
+																		JUl 22, 2023 10: 15 AM</div>
+																	<div class="zmtimeline__item__seperator">
+																		<span
+																			class="zmtimeline__item__connector"></span>
+																		<span class="zmtimeline__item__dot"><span
+																				class="zmbadge zmbadge--grey zmbadge-dot zmbadge--outlined"></span></span>
+																	</div>
+																	<div class="zmtimeline__item__content">
+																		<div class="zmruserdashboard__audilog__content">
+																			The access restriction of <strong>IP
+																				Restriction</strong> was deleted by
+																			<strong>Jennifer</strong>
+																			<button
+																				class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--default zmbtn--flat zmruserdashboard__audilog__popout"><i
+																					class="zmci-arrow-up-right-from-square"></i></button>
+																		</div>
+																	</div>
+																</li>
+																<li class="zmtimeline__item">
+																	<div
+																		class="zmtimeline__item__label zmruserdashboard__audilog__label">
+																		JUl 21, 2023 12: 30 PM</div>
+																	<div class="zmtimeline__item__seperator">
+																		<span
+																			class="zmtimeline__item__connector"></span>
+																		<span class="zmtimeline__item__dot"><span
+																				class="zmbadge zmbadge--grey zmbadge-dot zmbadge--outlined"></span></span>
+																	</div>
+																	<div class="zmtimeline__item__content">
+																		<div class="zmruserdashboard__audilog__content">
+																			The Storage details was
+																			<strong>Exported</strong> by <strong>Mike
+																				Hussyan</strong>
+																			<button
+																				class="zmbtn zmbtn--mbtn zmbtn--size zmbtn--default zmbtn--flat zmruserdashboard__audilog__popout"><i
+																					class="zmci-arrow-up-right-from-square"></i></button>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Session History</span>
+														</h3>
+														<div class="zmruserdashboard__table">
+															<table class="zmtable zmtable--simple">
+																<thead class="zmtable-header">
+																	<tr class="zmtable-row tableHead">
+																		<th class="zmtable-cell--align-left">Client IP
+																			Address</th>
+																		<th class="zmtable-cell--align-left">Session
+																			Start Time</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="zmtable-row">
+																		<td>12.111.23.98</td>
+																		<td>Yesterday</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>1.10.101.100</td>
+																		<td>10/12/2023</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>2.16.214.99</td>
+																		<td>09/12/2023</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>16.24.64.128</td>
+																		<td>04/12/2023</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="zmruserdashboard__info">
+														<div class="zmruserdashboard__popout"><button
+																class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><i
+																	class="zmci-arrow-up-right-from-square"></i></button>
+														</div>
+														<h3 class="zmruserdashboard__title"><span>Folder Details</span>
+														</h3>
+														<div class="zmruserdashboard__table">
+															<table class="zmtable zmtable--simple">
+																<thead class="zmtable-header">
+																	<tr class="zmtable-row tableHead">
+																		<th class="zmtable-cell--align-left">Name</th>
+																		<th class="zmtable-cell--align-left">Email Count
+																		</th>
+																		<th class="zmtable-cell--align-left">Size</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="zmtable-row">
+																		<td>Inbox</td>
+																		<td>1200</td>
+																		<td>1.4 GB</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>Drafts</td>
+																		<td>24</td>
+																		<td>124 MB</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>Sent</td>
+																		<td>326</td>
+																		<td>324 MB</td>
+																	</tr>
+																	<tr class="zmtable-row">
+																		<td>Spam</td>
+																		<td>26</td>
+																		<td>16 KB</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="zmdialog-outer-wrapper zmdialog-fadein" id="zmrcustom-dialog">
+		<div class="zmdialog-backdrop"></div>
+		<div class="zmdialog-inner-wrapper zmdialog--scroll-content">
+			<section class="zmdialog zmdialog--md">
+				<button class="zmdialog__close zmdialog__close--outside zmrcustomclosebtn"><i
+						class="zmci-close"></i></button>
+				<header class="zmdialog__header zmrcustom-header">
+					<h2 class="zmdialog__title">Create Custom Dashboard</h2>
+				</header>
+				<div class="zmdialog__content">
+					<div class="zmrcustom-dialog">
+						<div class="zmrcustom__filed">
+							<div class="zmrcustom__col">
+								<div class="zmtext zmtext--outlined zmtext--md">
+									<div class="zmtext-field-wrapper">
+										<input class="zmtext__box" type="text" placeholder="Enter Tab Name">
+									</div>
+								</div>
+							</div>
+							<div class="zmrcustom__col">
+								<div class="zmform-element">
+									<div class="zmtext zmtext--outlined zmselect zmtext--md">
+										<div class="zmtext-field-wrapper">
+											<div class="zmtext__adorn"><span
+													class="zmrtheme-color zmrtheme-color--option1"></span></div>
+											<span class="zmtext__box zmselect__box zmrtheme-selected"
+												data-placeholder="">Blue & Red</span>
+											<div class="zmtext__adorn zmselect__arrow"><i class="zmci-arrow-bottom"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="zmrcustom__col">
+								<div class="zmrcustom__toggle">
+									<span class="zmrcustom__toggle__label">Enable Cards View</span>
+									<span class="zmswitch zmswitch--filled zmswitch--sm"><input type="checkbox"
+											checked=""><span class="zmswitch__track"><span
+												class="zmswitch__thumb"></span></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="zmrcustom__title">Add Reports Widgets</div>
+						<div class="zmrcustom__filed">
+							<div class="zmrcustom__col">
+								<div class="zmrcustom__widget">
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<div class="zmtext__adorn"><i class="zmri-faq"></i></div>
+													<span class="zmtext__box zmselect__box" data-placeholder="">Summary
+														View</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<span class="zmtext__box zmselect__box" data-placeholder="">Group
+														With Most Members</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<i class="zmci-drag zmrdrag-icon"></i>
+							</div>
+							<div class="zmrcustom__col">
+								<div class="zmrcustom__widget">
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<div class="zmtext__adorn"><i class="zmri-faq"></i></div>
+													<span class="zmtext__box zmselect__box" data-placeholder="">Summary
+														View</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="zmrcustom__widget__list">
+										<div class="zmform-element">
+											<div class="zmtext zminput--error zmselect zmtext--unstyled zmtext--md">
+												<div class="zmtext-field-wrapper">
+													<span class="zmtext__box zmselect__box" data-placeholder="">Group
+														With Most Members</span>
+													<div class="zmtext__adorn zmselect__arrow"><i
+															class="zmci-arrow-bottom"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<i class="zmci-drag zmrdrag-icon"></i>
+							</div>
+							<div class="zmrcustom__col zmrcustom__add">
+								<button
+									class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--outlined zmbtn--primary zmbtn--disabled zmrcustom__action"><i
+										class="zmci-plus zmbtn__icon"></i><span class="zmbtn__text">Add Another
+										Widget</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="zmdialog__footer zmrcustom__footer">
+					<div class="zmbuttonbar">
+						<div class="zmbuttonbar-block zmbuttonbar-block--left-align">
+							<button class="zmbtn zmbtn--btn zmbtn--md zmbtn--red zmbtn--outlined"><span
+									class="zmbtn__text">Delete This View</span></button>
+						</div>
+						<div class="zmbuttonbar-block zmbuttonbar-block--right-align">
+							<button
+								class="zmbtn zmbtn--btn zmbtn--md zmbtn--outlined zmbtn--default zmrcustomclosebtn"><span
+									class="zmbtn__text">Close</span></button>
+							<button class="zmbtn zmbtn--btn zmbtn--md zmbtn--filled zmbtn--primary"><span
+									class="zmbtn__text">Create</span></button>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$('.zmrcustombtn').click(function () {
+			$('#zmrcustom-dialog').toggleClass('show');
+		});
+		$('.zmrLhs-toggle').click(function () {
+			$('.zmruserdashboard__userpanel').toggleClass('zmruserdashboard__userpanel--shrink');
+		});
+		$('.zmruserdashboard__search__box').click(function () {
+			$('.zmruserdashboard__userpanel').removeClass('zmruserdashboard__userpanel--shrink');
+		});
+		$('.zmrcustomclosebtn').click(function () {
+			$('.zmdialog-outer-wrapper').removeClass('show');
+		});
+
+		$(document).on('mouseover', '.has-hover', function () {
+			$(this).addClass('hovered');
+		});
+		$(document).on('mouseout', '.has-hover', function () {
+			$(this).removeClass('hovered');
+		});
+
+		window.onload = function () {
+			$(".zmtext__box").focus(function () {
+				$(this).parents(".zmtext").addClass("zmtext--focused");
+				if ($(this).parents(".zmtext").hasClass("zmtext-label-animation")) {
+					$(this).parents(".zmtext").addClass("zmtext-label-animated");
+				}
+			});
+			$(".zmtext__box").blur(function () {
+				$(this).parents(".zmtext").removeClass("zmtext--focused");
+				if ($(this).parents(".zmtext").hasClass("zmtext-label-animated") && $(this).val() == '') {
+					$(this).parents(".zmtext").removeClass("zmtext-label-animated");
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>

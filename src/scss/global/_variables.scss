@@ -1,0 +1,182 @@
+/*$Id:$*/
+@import '../themes/appearance/var';
+@import '../themes/color/var';
+@import '../global/mixin/rem';
+
+// Colors
+@function HEXtoRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+$ltr: "html[dir='ltr']" !default;
+$rtl: "html[dir='rtl']" !default;
+
+// Error
+$appSuccessColor: var(#{$successColor});
+$appErrorColor: var(#{$errorColor});
+$appInfoColor: var(#{$infoColor});
+$appWarningColor: var(#{$warningColor});
+
+// Error Standard BG
+$appStandardSuccessBG: var(#{$successBg});
+$appStandardErrorBG: var(#{$errorBg});
+$appStandardInfoBG: var(#{$infoBg});
+$appStandardWarningBG: var(#{$warningBg});
+
+// Appearance
+$appBG: var($bg, #fff);
+$appBodyBG: var($appBodyColor);
+$appAlternateBG: var($appChangeBG);
+$appAlternateTransBG: var($appTransBG);
+$appBorderColor: var($border);
+$appBorderLightColor: var($borderLight);
+$appBorderDarkColor: var($borderDark);
+$appBlackColor: var(--app-black-color);
+$appBlackColorRGB: var(--app-black-color-rgb);
+$appWhiteColor: var(--app-white-color);
+$appWhiteColorRGB: var(--app-white-color-rgb);
+$appSeparatorColor: var($seperatorColor);
+$appIconColor: var($iconColor);
+$appIconHoverColor: var($textColorTitle);
+$appToggleBG: var($appToggleColor);
+$appSearchBG: var($appSearchColor);
+$appSearchBorder: var($appSearchBor);
+$appTableHeadBG: var($listHeaderBg);
+$appArrowColor: var($inputBoxBorder);
+$appTooltipBG: var($bg);
+$appTooltipBorder: var($border);
+$appInputBorderColor: var($inputBoxBorder);
+$appSkeletonBG: var($appLoadingBG);
+$appSkeletonShineColor: var($appShineColor);
+$appSkeletonTblShineColor: var($appTblShineColor);
+$appScrollBarBG: var($scrollBarBG);
+$appScrollBarColor: var($scrollThumbBG);
+$appPlaceHolderColor: var($disabledColor);
+$appListHoverBG: var($listHoverBg);
+
+// Text Color
+$appTextColor: var($textColor);
+$appTextColorDark: var($textColorDark);
+$appTextColorLight: var($textColorLight);
+$appTextColorLighter: var($textColorLight);
+$appTextColorTitle: var($textColorTitle);
+$appTextColorCritical: var($textColorCritical);
+$appLabelTextColor: var($textColorLight);
+$appDisabledColor: var($disabledColor);
+
+// Grey BG
+$appGreyDarkBG: var($grey20);
+$appGreyBG: var($grey10);
+
+//Note
+$appNoteBG: var(--app-note-bg);
+$appNoteBorder: var(--app-note-border);
+$appYNoteBG: var(--app-yellow-note-bg);
+$appYNoteBorder: var(--app-yellow-note-border);
+
+//Header
+$appTopHeaderBG   : var(--app-header-bg);
+$appLHSLogoBG     : var(--app-header-logo-bg);
+$appLHSLogoColor  : var(--app-header-logo-color);
+
+//LHS
+$appLHSBG                 : var($appNLHSBG);
+$appLHSListHoverBG        : var(--app-lhs-list-hover-bg);
+$appLHSListSelectedBG     : var(--app-header-logo-bg);
+$appLHSListColor          : var(--app-lhs-list-color);
+$appLHSListSelectedColor  : var(--app-lhs-list-selected-color);
+$appLHSDivider            : var($appLHSBorder);
+$appLHSRightBorder        : var($appLHSBorder);
+
+$appBarBG: var($appbarlistBG);
+
+// Theme
+$appThemeColor100         : var($theme100);
+$appThemeColor200         : var($theme200);
+$appThemeColor300         : var($theme300);
+$appThemeColor400         : var($theme400);
+$appThemeColor500         : var($theme500);
+$appThemeColor600         : var($theme600);
+$appThemeColor700         : var($theme700);
+$appThemeColor800         : var($theme800);
+$appThemeColor900         : var($theme900);
+$appThemeColor400rgb      : var($theme400rgb);
+$appThemeColor500rgb      : var($theme500rgb);
+
+$appThemeListSelectedBG   : var($themeListSelectedBg);
+$appThemeActionColor      : var($actionColor);
+$userPanelBG              : var($theme400);
+$userPanelDarkBG          : var($theme500);
+
+//Font
+$fontNormal   : normal;
+$fontRegular  : 400;
+$fontMedium   : 500;
+$fontBold     : 700;
+$fontBlack    : 800;
+
+$H1fontSize: var(--h1-font-size);
+$H2fontSize: var(--h2-font-size);
+$H3fontSize: var(--h3-font-size);
+$H4fontSize: var(--h4-font-size);
+$H5fontSize: var(--h5-font-size);
+$H6fontSize: var(--h6-font-size);
+
+$fontSize8   : #{rem(8px)};
+$fontSize10  : #{rem(10px)};
+$fontSize11  : #{rem(11px)};
+$fontSize12  : #{rem(12px)};
+$fontSize13  : #{rem(13px)};
+$fontSize14  : #{rem(14px)};
+$fontSize16  : #{rem(16px)};
+$fontSize18  : #{rem(18px)};
+$fontSize20  : #{rem(20px)};
+
+$lineHeight12  : #{rem(12px)};
+$lineHeight16  : #{rem(16px)};
+$lineHeight20  : #{rem(20px)};
+$lineHeight28  : #{rem(28px)};
+$lineHeight32  : #{rem(32px)};
+$lineHeight36  : #{rem(36px)};
+$lineHeight40  : #{rem(40px)};
+$lineHeight52  : #{rem(52px)};
+$lineHeight60  : #{rem(60px)};
+
+$space4   : #{rem(4px)};
+$space8   : #{rem(8px)};
+$space12  : #{rem(12px)};
+$space16  : #{rem(16px)};
+$space24  : #{rem(24px)};
+$space32  : #{rem(32px)};
+$space40  : #{rem(40px)};
+$space48  : #{rem(48px)};
+$space56  : #{rem(56px)};
+$space64  : #{rem(64px)};
+
+$radius2       : #{rem(2px)};
+$radius4       : #{rem(4px)};
+$radius8       : #{rem(8px)};
+$radiusRounded : 50%;
+
+$shadowSM  : 0 1px 1px rgba(0, 0, 0, .2), 0 1px 8px rgba(0, 0, 0, .1);;
+$shadowMD  : 0 1px 8px rgba(0, 0, 0, .1), 0 8px 24px rgba(0, 0, 0, .15);
+$shadowLG  : 0 1px 8px rgba(0, 0, 0, .1), 0 16px 48px rgba(0, 0, 0, .1), 0 24px 60px rgba(0, 0, 0, .1);
+	
+$transitionDefault   : all .3s ease;
+$transitionBounce    : cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$transitionInout     : cubic-bezier(0.645, 0.045, 0.355, 1);
+$transitionEase      : ease;
+$transitionEasein    : cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$transitionEaseout   : cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$transitionTime3s    : .3s;
+$transitionTime5s    : .5s;
+$transitionTime7s    : .7s;
+
+$zindexDropdown       : 1000;
+$zindexSticky         : 1020;
+$zindexFixed          : 1030;
+$zindexModalBackdrop  : 1040;
+$zindexModal          : 1050;
+$zindexPopover        : 1060;
+$zindexTooltip        : 1070;

@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<title>Admin Reports</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="//zmstatic/mockups/component/css/components.css" rel="stylesheet" type="text/css">
+	<link href="../css/local-fonts.css" rel="stylesheet" type="text/css">
+	<link href="../css/icons.css" rel="stylesheet" type="text/css">
+	<link href="../css/themes.css" rel="stylesheet" type="text/css">
+	<link href="../css/layout.css" rel="stylesheet" type="text/css">
+	<link href="../css/header.css" rel="stylesheet" type="text/css">
+	<link href="../css/appsbar.css" rel="stylesheet" type="text/css">
+	<link href="../css/sidebar.css" rel="stylesheet" type="text/css">
+	<link href="../css/actionbar.css" rel="stylesheet" type="text/css">
+	<link href="../css/reportstable.css" rel="stylesheet" type="text/css">
+	<link href="../css/quicksearch.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="zmf-lato zmAppLight zmThmBlue zmLHSDark">
+	<main class="zmr-main-container">
+		<header class="zmrheader">
+			<div class="zmrheader__brand">
+				<div class="zmrheader__logo">
+					<i class="zmri-mailadmin"></i>
+					<span class="zmrheader__name">Admin Reports</span>
+				</div>
+			</div>
+			<div class="zmrheader__info">
+				<div class="zmrpage-title">
+					<span class="zmrpage-text"><span>User Summary</span><button
+							class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+								class="zmri-star zmbtn__icon"></i></button></span>
+				</div>
+				<div class="zmrheader__nav">
+					<ul>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat quickopenbtn"><i
+									class="zmri-search zmbtn__icon"></i></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat pulse-effect"><i
+									class="zmri-clouddown zmbtn__icon"></i></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--lg zmbtn--default zmbtn--flat"><i
+									class="zmri-help zmbtn__icon"></i></button></li>
+						<li class="zmrheader__nav-img">
+							<div class="zmavatar zmavatar--md zmavatar--circle">
+								<div class="zmavatar__image-wrapper"><img class="zmavatar__image" alt=""
+										src="../img/user-thumbnail.png"></div>
+								<i class="zmuseravailability available"></i>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="zmrpage-container">
+			<div class="zmrapps">
+				<div class="zmrapps-scrollbar">
+					<ul>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='dashboard.html'"><i class="zmbtn__icon zmri-dashboard"></i><span
+									class="zmbtn__text">Dashboard</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-favourite"></i><span
+									class="zmbtn__text">Favourites</span></button></li>
+						<li class="zmrapps__active"><button
+								class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-user"></i><span class="zmbtn__text">Users</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='addon-storage.html'"><i
+									class="zmbtn__icon zmri-mailunread"></i><span
+									class="zmbtn__text">Mailbox</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='threat-traffic-preview.html'"><i
+									class="zmbtn__icon zmri-statistics"></i><span class="zmbtn__text">Email
+									Statistics</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-groups"></i><span class="zmbtn__text">Groups</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='audit-logs.html'"><i class="zmbtn__icon zmri-logsnew"></i><span
+									class="zmbtn__text">Logs</span></button>
+						</li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i
+									class="zmbtn__icon zmri-security"></i><span
+									class="zmbtn__text">Compliance</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='dorm-reports-cardview.html'"><i
+									class="zmbtn__icon zmri-collaborative"></i><span class="zmbtn__text">Collaborative
+									Apps</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"
+								onclick="location.href='activity-summary.html'"><i
+									class="zmbtn__icon zmri-organization"></i><span
+									class="zmbtn__text">Organization</span></button></li>
+						<!--<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>
+							<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-security"></i><span class="zmbtn__text">Security</span></button></li>
+						<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrapps__nav"><i class="zmbtn__icon zmri-organization"></i><span class="zmbtn__text">Organization</span></button></li>-->
+					</ul>
+				</div>
+				<div class="zmrsettings-section"><button
+						class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsetting-btn"
+						onclick="location.href='settings.html'"><i class="zmbtn__icon zmri-controls"></i><span
+							class="zmbtn__text">Configuration</span></button></div>
+			</div>
+			<div class="zmrpage-contentarea">
+				<div class="zmrsubmenu-container">
+					<div class="zmrsubmenu__search">
+						<div class="zmform-element">
+							<div class="zmtext zmtext--filled zmtext--md input-bg">
+								<div class="zmtext-field-wrapper">
+									<div class="zmtext__adorn"><i class="zmci-search"></i></div>
+									<input class="zmtext__box" type="text" placeholder="Search">
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<button class="zmaccordion__trigger zmrsubmenu__nav zmaccordion--expand-active"><span
+									class="zmaccordion__title">Account Status Reports</span><i
+									class="zmaccordion__icon zmci-arrow-top"></i></button>
+							<ul class="zmrsubmenu__item zmaccordion__content zmaccordion--enter zmaccordion--enter-active"
+								style="max-height: 300px;">
+								<li class="current"><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">User summary</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"
+										onclick="location.href='chart-with-table.html'"><span class="zmbtn__text">Chart
+											with Table</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">Blocked user summary</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">Users without mailbox</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">Users without groups</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">External from addresses</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">Forwarding summary</span></button></li>
+								<li><button
+										class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat zmrsubmenu__subnav"><span
+											class="zmbtn__text">Out of office</span></button></li>
+							</ul>
+						</li>
+						<li><button class="zmaccordion__trigger zmrsubmenu__nav"><span
+									class="zmaccordion__title">Sign-ins Activity</span><i
+									class="zmaccordion__icon zmci-arrow-bottom"></i></button></li>
+						<li><button class="zmaccordion__trigger zmrsubmenu__nav"><span
+									class="zmaccordion__title">Sign-ins Summary</span><i
+									class="zmaccordion__icon zmci-arrow-bottom"></i></button></li>
+						<li><button class="zmaccordion__trigger zmrsubmenu__nav"><span
+									class="zmaccordion__title">Sign-ins Apps</span><i
+									class="zmaccordion__icon zmci-arrow-bottom"></i></button></li>
+					</ul>
+				</div>
+				<div class="zmrcontent-container">
+					<div class="zmrcontent-non-scrollable">
+						<div class="zmractionbar">
+							<div class="zmractionbar__left">
+								<div class="zmractionbar-nav">
+									<div class="zmbuttonbar-block">
+										<button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default">
+											<i class="zmri-export zmbtn__icon"></i><span
+												class="zmbtn__text">Export</span>
+										</button>
+										<i class="zmmenu-separator zmmenu-separator--line"></i>
+										<button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--flat zmbtn--default">
+											<i class="zmri-filter zmbtn__icon"></i><span
+												class="zmbtn__text">Filter</span>
+										</button>
+										<i class="zmmenu-separator zmmenu-separator--line"></i>
+										<div class="zmform-element">
+											<div class="zmtext zmtext--filled zmtext--md input-bg">
+												<div class="zmtext-field-wrapper">
+													<div class="zmtext__adorn"><i class="zmci-search"></i></div>
+													<input class="zmtext__box" type="text"
+														placeholder="Search Name/Email">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="zmractionbar__right">
+								<div class="zmractionbar-nav">
+									<span class="zmspinner"></span>
+									<span>Showing <b>50</b> of <b>189</b></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="zmrcontent-scrollable zmrcontent-scrollbar">
+						<table class="zmtable zmtable--simple">
+							<thead class="zmtable-header zmtable-header--sticky">
+								<tr>
+									<th>Name/Email<span class="zmrsorting zmrsorting--asc"></span></th>
+									<th>Last login time<span class="zmrsorting zmrsorting--asc"></span></th>
+									<th class="zmtable-cell--align-center">TFA status</th>
+									<th class="zmtable-cell--align-center">User status</th>
+									<th>Group membership(s)<span class="zmrsorting zmrsorting--asc"></span></th>
+									<th>Role<span class="zmrsorting zmrsorting--asc"></span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Rejin</div>
+												<div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td class="zmtable-ellipsis">
+										<div class="zmtable-flex-wrapper">
+											<div class="zmtable-cell-title">Balakrishnan Balamurugan</div>
+											<div class="zmtable-cell-ellipsis">
+												<div class="zmtable-cell-desc">balamurugan.s@admintestnew.online</div>
+												<span
+													class="zmbadge zmbadge--theme zmbadge--outlined zmbadge--circle">+2</span>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-desc">New user</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td class="zmtable-ellipsis">
+										<div class="zmtable-flex-wrapper">
+											<div class="zmtable-cell-ellipsis">
+												<div class="zmtable-cell-desc">group79@prabu1.us</div>
+												<span
+													class="zmbadge zmbadge--theme zmbadge--outlined zmbadge--circle">+2</span>
+											</div>
+										</div>
+									</td>
+									<td>Custom administrator</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">anand2</div>
+												<div class="zmtable-cell-desc">anand2@prabutest1.us</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group72@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Cliq</div>
+												<div class="zmtable-cell-desc">cliq@prabu1.us</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">2 months ago</div>
+										<div class="zmtable-cell-desc">23/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">user custom</div>
+												<div class="zmtable-cell-desc">custom.user@prabu1.us</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-desc">New user</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">R David</div>
+												<div class="zmtable-cell-desc">david.r@prabu.ac-domain.in</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Group Moderator only</div>
+												<div class="zmtable-cell-desc">groupmoderatoronly@prabu1.us</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-desc">New user</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Rejin</div>
+												<div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-desc">New user</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Rejin</div>
+												<div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Rejin</div>
+												<div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Rejin</div>
+												<div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+								<tr class="zmtable-row">
+									<td>
+										<div class="zmtable-flex-wrapper">
+											<div>
+												<div class="zmtable-cell-title">Rejin</div>
+												<div class="zmtable-cell-desc">rejin@zohocorp.com</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="zmtable-cell-title">5 months ago</div>
+										<div class="zmtable-cell-desc">06/12/21 11:52</div>
+									</td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--error"><i
+												class="zmri-close"></i></span></td>
+									<td class="zmtable-cell--align-center"><span class="zmtable-status--success"><i
+												class="zmri-tick"></i></span></td>
+									<td>group87@prabu1.us</td>
+									<td>User</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<div class="zmdialog-outer-wrapper zmdialog-fadein" id="quicksearch">
+		<div class="zmdialog-backdrop"></div>
+		<div class="zmdialog-inner-wrapper zmdialog--scroll-content">
+			<section class="zmdialog zmdialog--md">
+				<button class="zmdialog__close zmdialog__close--outside quickclosebtn"><i
+						class="zmci-close"></i></button>
+				<header class="zmdialog__header zmrqsearch-header">
+					<h2 class="zmdialog__title">Selected Report Details</h2>
+					<div class="zmrqsearch__box">
+						<div class="zmform-element">
+							<div class="zmtext zmtext--filled zmtext--md input-bg">
+								<div class="zmtext-field-wrapper">
+									<div class="zmtext__adorn"><i class="zmci-search"></i></div>
+									<input class="zmtext__box" type="text" placeholder="Search Report">
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="zmdialog__content">
+
+					<div class="zmrqsearch-wrap">
+						<div class="zmrqsearch-container">
+							<h6>Users (5)</h6>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="zmrqsearch-container">
+							<h6>Users (5)</h6>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="zmrqsearch__box">
+								<div class="zmrqsearch__title">Account Status Reports (7)</div>
+								<div class="zmrqsearch__listing">
+									<ul>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">User summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Blocked user summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Storage details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Protocol status details</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Forwarding summary</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently created</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">Recently deleted</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync access</span></button></li>
+										<li><button class="zmbtn zmbtn--mbtn zmbtn--md zmbtn--default zmbtn--flat"><span
+													class="zmbtn__text ">ActiveSync apps</span></button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="zmrquick-wrap" style="display: none;">
+						<div class="zmrquick__box">
+							<h6>Select Report Category</h6>
+							<div class="zmrquick__listing">
+								<ul>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action active"><span
+												class="zmaccordion__title">User account reports</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Email statistics (by User)</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Email statistics (by Domain)</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Group reports</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">DMARC reports</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Organization</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">WorkDrive reports</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Audit logs</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Advanced Email logs</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+
+								</ul>
+							</div>
+						</div>
+						<i class="zmrquick-separator"></i>
+						<div class="zmrquick__box">
+							<h6>Select Report Sub Category</h6>
+							<div class="zmrquick__listing">
+								<ul>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">User summary</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Blocked user summary</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Storage details</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Protocol status details</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Forwarding summary</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Recently created</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">Recently deleted</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">ActiveSync access</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+									<li><button class="zmaccordion__trigger zmrquick-nav-action"><span
+												class="zmaccordion__title">ActiveSync apps</span><i
+												class="zmaccordion__icon zmri-larrow"></i></button></li>
+								</ul>
+							</div>
+						</div>
+						<i class="zmrquick-separator"></i>
+						<div class="zmrquick--empty">
+							<span>Select Report Sub Category to dispaly Reports</span>
+						</div>
+					</div>
+				</div>
+				<footer class="zmdialog__footer">
+					<div class="zmbuttonbar">
+						<div class="zmbuttonbar-block">
+							<button class="zmbtn zmbtn--btn zmbtn--md zmbtn--filled zmbtn--primary">
+								<span class="zmbtn__text">Submit</span>
+							</button>
+							<button class="zmbtn zmbtn--btn zmbtn--md zmbtn--outlined zmbtn--default quickclosebtn">
+								<span class="zmbtn__text">Cancel</span>
+							</button>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$('.quickopenbtn').click(function () {
+			$('#quicksearch').toggleClass('show');
+		});
+		$('.quickclosebtn').click(function () {
+			$('.zmdialog-outer-wrapper').removeClass('show');
+		});
+	</script>
+</body>
+
+</html>
