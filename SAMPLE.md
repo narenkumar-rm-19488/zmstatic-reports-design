@@ -13,6 +13,9 @@ This is a comprehensive sample markdown page that demonstrates various markdown 
 - [Blockquotes](#blockquotes)
 - [Horizontal Rules](#horizontal-rules)
 - [Task Lists](#task-lists)
+- [Additional Elements](#additional-elements)
+- [Best Practices](#best-practices)
+- [Conclusion](#conclusion)
 
 ---
 
